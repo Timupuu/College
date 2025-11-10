@@ -1,0 +1,72 @@
+11/05/2025
+  Router used: Router 2911
+  Switch used: Switch 2960
+  Hub
+  
+11/07/2025
+
+  When connection is to be made between same devices;
+    Switch to Switch or Router to Router generally copper cross over cable is used.
+  
+  When connection is to be made between different devices;
+    Router to Switch  or Switch to P.C generally copper straight through cable is used.
+
+Questions and their Answers:
+
+Step 1:
+
+Qn.1
+  >> The categories of intermediary devices are routers, switches multilayer switches, modem and ip phone.
+
+Qn.2
+  >> There are 15 endpoints, some are servers, pc's, printer, smartphones, tablet and laptops
+
+Qn.3
+  >> There are 13 intermediary devices including switches, routers, multilayer switch and ip phones.
+
+Qn.4
+  >> There are 8 end devices excluding desktop, they include laptop smartphones and servers along with printers.
+ 
+ Qn.5
+  >> There are 4 types of media connections including copper straight, serial dte, coaxial and wireless.
+
+Step 2
+
+Qn.a
+  >> Client server model is a distributed service model where the clients via their end points request service from the server and the server provides service to those such clients.
+
+Qn.b
+  >> The two functions of intermediary devices are:
+      > Connection between various endpoints and other intermediary devices.
+      > Tracing and guiding packages to their destination via the most efficient order.
+
+Qn.c 
+  >> The two criteria for choosing a network media type are as follows:
+      > The devices that are to be connected.
+      > Efficiency and practicality
+
+Step 3:
+
+Qn.a 
+  >> The difference between LAN and WAN are as follows:
+      ----------------------------------------------------------------------------------------------------------------------------------------------------- 
+      |   Local Area Network (LAN)                                               |            Wide Area Network (WAN)                                     |
+      ----------------------------------------------------------------------------------------------------------------------------------------------------- 
+      | It is the connection in a local area consisting of various endpoints     | It is the connection in a wide area spanning various cities and        |
+      | spanning only a small area.                                              | spanning large number of endpoints within a  big area.                 |
+      ----------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+Qn.b 
+  >> In the given network configuration 2 WAN's are visible. 
+
+Qn.c 
+  >> In the given network configuration 3 LAN's are visible.
+
+Qn.d 
+  >> The internet is a large connection of endpoints and intermediary devices spanning throughout the whole world. It consists of various lan's, man's and wan's. 
+
+Qn.e 
+  >> Some of the common ways a home user is able to connect to the internet are via various intermediary devices such as router, modem through which he progresses from his lan to man then to wan and finally to the internet.
+
+Qn.f
+  >> The ways 

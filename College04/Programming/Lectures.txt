@@ -1,0 +1,42 @@
+11/04/2025
+Terms:  Programming refers to the process of writing a program, It is also known as coding
+        Programmer refers to the person who writes the codes, it is also to refereas coder 
+        
+        Classification of Programming languages:
+        |-> High level language 
+            > C, Java, C++
+
+        |-> Low level languages
+            > Machine language
+            > Assembly language
+
+  Java was made by James Gosling in 1194 while he worked at sun microsystems
+
+  OOP: Object oriented programming refers to the process of writing a program by using classes and objects. Its simple because: No confusing terms
+       OOP.
+
+        The concepts of OOP are as follows:
+        > Object
+        > Class 
+        > Inheritence
+        > Polymorphism
+        > Abstraction
+        > Encaptulation
+
+11/06/2025
+  Java is distributed into three editions:
+    1. Standard edition
+    2. Mobile edition
+    3. Enterprise edition
+
+    Java syntax
+
+    For printing: 
+
+    System.out.print("Hello World"); Doesn't leave a line after printing
+    System.out.println("Hello World"); Leaves a space after printing the line
+    >> for printing out a line or a word 
+    
+    >> for single character use '' and "" for strings
+
+

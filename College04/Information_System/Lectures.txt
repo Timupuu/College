@@ -1,0 +1,39 @@
+11/04/2025
+
+ERD diagram or Entity Relation diagram
+
+  Entity: 
+      > Teacher
+      > Course
+      > Student 
+      > Class
+      
+
+Relations: 
+    > One to One
+       Teacher <--> Course
+    
+    > Many to one         OR One to many
+       Student <--> Class     Class <--> Student
+
+    > Many to many
+      Teacher <--> Student
+
+Business rule:
+1. A Teacher oversees one entire course. (One to one)
+2. Many students attain one class and do one course  (both are many to one) 
+3. A Course is taught by one teacher, A course is taken by many students (one to one) (One to many)
+4. A Class is attended by one teacher and attended by many students (one to one) (one to many)
+
+Entity relation diagram 
+
+|---------|              |--------|             |---------|            |-------|
+| Teacher |-|----------|-| Course | -----------=| Student |=---------|-| Class |
+|---------|              |--------|             |---------|            |-------|
+
+Business rules:
+  A teacher oversees one course 
+  A course takes place in a class 
+  Many students attend one class
+  A teacher teaches many students
+  A teacher teaches in class
