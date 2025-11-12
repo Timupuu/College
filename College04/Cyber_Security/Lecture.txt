@@ -16,7 +16,9 @@ Question and Answers:
       Due to the increasing use and accessibility of internet all over the internet, there is more use of internet by the general public therefore due to increase in the use of internet and cyberspace, cybersecurity is important in the present day.
 
   2. Discuss the advantages and disadvantages of Cloud Based solutions.
-      
+      The advantages and disadvantages are as follows:
+      Advantages 
+      1. The data is freely advantages
 
 
 11/07/2025
@@ -28,5 +30,21 @@ Question and Answers:
   >> Risk 
   >> NIST: An American agency related to Cybersecurity and vulnerabilities.
   >> Privilege escalation: The ability to access the data as a root or admin via changing privilege. 
-  >> The three main principles of information security is CIA: confidentiality, integrity and availability.
-  >>
+  >> The three main principles of information security is CIA: confidentiality, integrity and availability
+
+11/12/2025
+
+Outsourcing: 
+  Using external/third-party entity to complete a certain task.
+  The amount we outsource is proportional to the amount of risk.
+    risk = likelihood * impact 
+    likelihood: vulnerabilities, exposure, threats, mitigation controls
+    impact: business crediibility 
+
+  CIA triad: The three main principles of information security.
+    C: confidentiality
+    I: Integrity
+    A: Availability 
+
+  Hashing: 
+
