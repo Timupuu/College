@@ -69,4 +69,85 @@ Qn.e
   >> Some of the common ways a home user is able to connect to the internet are via various intermediary devices such as router, modem through which he progresses from his lan to man then to wan and finally to the internet.
 
 Qn.f
-  >> The ways 
+  >> The ways
+
+11/12/2025
+
+Command modes: {Use '?' to see all the command in each mode of the terminal} {use command exit/end to return to the previous command mode}
+  1. User Exec mode: 
+      eg: Router > 
+      The '>' symbolizes that we are in this mode. 
+
+  2. Privilege exec mode {use command enable to get into this mode from mode 1}
+      eg. Router #
+
+  3. Global configuration mode {use command configure terminal to enter this mode from mode 2}
+      eg. Prompt(config)#
+      can also be Router(Config)#
+
+
+  User Exec mode
+
+  |                     ^
+  |enable               | exit 
+  *                     |
+
+  Privilege Exec mode
+
+  |                     ^
+  |configure terminal   | exit 
+  *                     |
+
+  Global configuration mode
+
+
+  In Global configuration mode
+  #hostname
+    use this command in global configuration mode to change/set the desired hostname
+    usage: hostname name
+
+  #enable
+    use this command with 
+    
+    >> password 
+      to change/set the desired password
+      usage: enable password ****
+
+    >> secret
+      to change/set the desired password in encrypted format
+      usage: enable secret ciscoSecret
+
+  # no ip domain_lookup
+    use this command to make sure that the packettracer doesn't start looking up typos as codes.
+
+  # service password-encryption
+    Use this command to encrypt the plaintext password
+
+  # line console 0
+    to get into line console and the '0' means that there is only one person configuring at the moment
+    we get into (config-line) when this command is executed 
+    
+    >> password **** 
+        to set password in this mode
+
+    >> login 
+        to login into the config-line mode
+    
+    >> logging synchronous 
+        to make sure that no reply is seen in the terminal when commands are executed.
+
+  # line vty 0,4 {the 0,4 makes sure that 5 users i.e 0 to 4 are able to config at once}
+    to get into vty mode 
+
+    >> password **** 
+        to set password 
+
+    >> login 
+        to make sure that we can login later on.
+
+    
+  In Privilege Exec mode
+
+  #show running-config
+    use this code to view all the past commands and the current configuration.
+
