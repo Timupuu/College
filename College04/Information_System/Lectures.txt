@@ -37,3 +37,40 @@ Business rules:
   Many students attend one class
   A teacher teaches many students
   A teacher teaches in class
+
+  11/11/2025
+    
+    Database
+      Rows within a table are also known as record.
+      Column correspond to the number of attributes
+        
+        Getting into mariadb or mysql
+      >> $ sudo mysql -u root -h localhost
+      OR 
+      >> $ sudo mysql -u root -p 
+
+        To create a database
+      >> create database database_name;
+      
+        To list all the databases 
+      >> show databases;
+      
+        To use a database
+      >> use database_name;
+        
+        To create and view the tables within a database
+      >> create table class (classid int, name varchar(50), location varchar(50));
+      
+
+      >>show tables; 
+      
+        To insert values
+      >> insert 
+
+
+
+
+
+
+
+
