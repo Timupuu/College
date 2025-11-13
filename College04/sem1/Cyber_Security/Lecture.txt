@@ -18,7 +18,50 @@ Question and Answers:
   2. Discuss the advantages and disadvantages of Cloud Based solutions.
       The advantages and disadvantages are as follows:
       Advantages 
-      1. The data is freely advantages
+      1. The data is freely available at any istance.
+      2. There is practically infinite amount of resources and storage.
+      3. There is enhanced security and integrity of data.
+      4. There is availability of data and recovery as well.
+
+      Disadvantages
+      1. Security risk as we are outsourcing for our storage.
+      2. Confidentiality breach 
+      3. There maybe isses when trying to access through the online portal
+      4. Requires internet connectivity
+  
+  3. List out the key differences between cybersecurity and information security.
+      The main key differences between cybersecurity and informtaion security are as dfollows:
+      Cybersecurity						Information Security
+     >> It is the security related to				It may be associated with physical 
+      	online cyberspace only					as well as online data or information
+	
+     >>	It consists of both offensive, 				It doesn't contain offensive strategies 
+	defensive stratigies to safeguard			only compromising ways to defend and
+	a person or an institute				safe guard the information
+
+	It is only relevent when a user				It is relevent both in online as well as
+	or an institute has a online 				offline spaces
+	presence or footprint
+
+  4. The type of cyber risks are as follows:
+       
+       Malware: A destructive and exploting script/ software that conducts various types of exploits and viruses
+
+       Social engineering: The risk that is associated with the weakest link i.e humans where the trust and emotions are used as a basis of exploiting and causing cyber harm. 
+
+       Identity and crednetial theft: The use of someone's private information for self gain by a ill intent without the person's consent or knowledge
+
+       Network and system attacks: Attacks such as man in the middle, sql injection, denial of service where the cyber criminal uses various means intercept, exploit and cause harm to a service or weaken the availability of the services
+
+       Cryptojacking: The unauthorized use of a user's end device to mine crypto currency causing load and stress on the end device without the person's knowledge.
+
+  5. The types of malware are as follows: 
+       
+       Viruses: A type of malware that manipulates data or files within the end device to cause stress on the system and cause lagging and buffering
+
+       Ransomware: A type of malware that steals/delets or controls the data of a user and demands ransom for it's release
+
+       Spyware: A type of malware which takes control over the user's logs, input devices and captures and monitors the user's activities and his inputs
 
 
 11/07/2025
