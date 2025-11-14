@@ -67,7 +67,8 @@ Business rules:
         To insert values
       >> insert 
 
-
+11/13/2025
+  Start mariadb and then start mysql 
 
 
 

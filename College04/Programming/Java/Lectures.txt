@@ -1,9 +1,0 @@
-Post increment: First uses or assigns the value then only increases.
-int a;
-int b = a++;
-Here the value of b will b a while the value of a will be a+1
-
-Pre increment: First increment then only assign or use the value.
-int a;
-int b = ++a;
-Here the value of b will be a+1 and a will be a

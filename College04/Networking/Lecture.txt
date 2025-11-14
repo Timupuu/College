@@ -113,11 +113,11 @@ Command modes: {Use '?' to see all the command in each mode of the terminal} {us
       to change/set the desired password
       usage: enable password ****
 
-    >> secret
+    >> secret(To encrypt the password)
       to change/set the desired password in encrypted format
       usage: enable secret ciscoSecret
 
-  # no ip domain_lookup
+  # no ip domain-lookup
     use this command to make sure that the packettracer doesn't start looking up typos as codes.
 
   # service password-encryption
@@ -136,7 +136,11 @@ Command modes: {Use '?' to see all the command in each mode of the terminal} {us
     >> logging synchronous 
         to make sure that no reply is seen in the terminal when commands are executed.
 
-  # line vty 0,4 {the 0,4 makes sure that 5 users i.e 0 to 4 are able to config at once}
+    >> exec-timeout 10
+      use this to make it so that it disconnects after 10 mins.
+
+  # line vty 0 4 {the 0,4 makes sure that 5 users i.e 0 to 4 are able to config at once}
+    vty means virtual terminal
     to get into vty mode 
 
     >> password **** 
@@ -145,9 +149,37 @@ Command modes: {Use '?' to see all the command in each mode of the terminal} {us
     >> login 
         to make sure that we can login later on.
 
-    
+  # banner motd */# Authorized only! */#
+    use either * or # not both
+  
+  #security password min-length 10  
+    use this to set the minimum password length to 10
+
+  #interface Fa0/0 
+    use this to select the port or interface
+
+  #ip address 192.168.1.1 255.255.255.0
+    use this to set the ip address and the subnet mask 
+
+  #no shutdown
+    use this to make sure that the device is on and data is transmitted.
+
+
   In Privilege Exec mode
 
   #show running-config
     use this code to view all the past commands and the current configuration.
 
+  #clock set hh:mm:ss mm dd yy
+    use this to set time and date 
+
+  #show clock 
+    use this to see the clock
+
+
+11/14/2025
+
+// when it asks for a password give the password of console i.e consoleclass
+then we enter the user exec mode
+then use the encrypted password to change into global configuration mode
+  

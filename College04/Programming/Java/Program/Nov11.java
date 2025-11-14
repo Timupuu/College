@@ -19,10 +19,13 @@ public class Nov11
          */
         
         //Simple calculator
-        /**double a;
+        /**
+        double a;
         double b;
         char opr;
         double output;
+        System.out.println("Enter to the simple calculator");
+        scanner.nextLine();
         System.out.println("Enter the 1st digit");
         a = scanner.nextDouble();
         System.out.println("Enter the 2nd digit");
@@ -48,7 +51,6 @@ public class Nov11
             System.out.println("The output is " + output);
         }
         */
-            
-    
-    }
+       
    }
+}
