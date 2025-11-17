@@ -69,6 +69,9 @@ Business rules:
 
 11/13/2025
   Start mariadb and then start mysql 
+Various queries were done, making database, creating tables and data was inserted into them along with various queries to view the data in the tables
+
+11/17/2025
 
 
 

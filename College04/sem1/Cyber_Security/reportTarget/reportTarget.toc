@@ -1,3 +1,4 @@
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {0.1}Introduction}{2}{}%
 \contentsline {paragraph}{During the last two decades in the feild of cybersecurity, many \nobreak incidents have taken place which has helped to bring the realm of cyber and infomation security to the place it is now}{2}{}%
 \contentsline {paragraph}{With events such as the 2013 data breach of MySpace where 360 million users had their login credentials stolen, in the same year the personal information of 3 billion Yahoo users was compromised.}{2}{}%
@@ -22,3 +23,6 @@
 \contentsline {paragraph}{After the attack was revealed a few weeks, Target faced numerous lawsuits from various parties.}{5}{}%
 \contentsline {section}{\numberline {0.4}Methodologies}{6}{}%
 \contentsline {paragraph}{Here we will go indepth about the malware and exploits used and their functionalities:}{6}{}%
+\contentsline {section}{\numberline {0.5}Conclusion}{8}{}%
+\contentsline {paragraph}{From this cyber attack we can conclude how outsourcing was one of the major instigator of this whole event.}{8}{}%
+\contentsline {section}{\numberline {0.6}Bibliography}{9}{}%

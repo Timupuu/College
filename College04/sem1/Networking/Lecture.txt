@@ -183,3 +183,37 @@ Command modes: {Use '?' to see all the command in each mode of the terminal} {us
 then we enter the user exec mode
 then use the encrypted password to change into global configuration mode
   
+
+11/17/2025
+
+Bit: Either 0 or 1
+
+Ip address is a logical address.
+  which is designated to specific location of a device on a network.
+
+Ipv4 address = 32 bit
+
+Within each network there are three types of IP addresses:
+  >> Network address
+  >> Host address
+  >> Broadcast address
+
+
+Methods of communications:
+  Unicast: One to one communication 
+  Broadcast: One to all communication in a network segment
+  Multicast: One to many communication
+
+Private ip address ranges
++---------------------------+--------------------------------+
+| Network Address and prefix|RFC 1918 Private address range  |
+--------------------------------------------------------------
+10.0.0.0/8                      10.0.0.0 - 10.255.255.255
+172.16.0.0/12                   172.16.0.0 - 172.31.255.255
+192.168.0.0/16                  192.168.0.0 - 192.168.255.255
+
+Reasons for segmentation of networks:
+  >>Reduces overall network traffic and improve Efficiency
+  >>Can be used to implement security policies
+  >>Helps reduce number of devices if something goes wrong 
+  >>They are also used for segmenting various locations, groups and devices
