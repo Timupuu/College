@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {0.1}Introduction}{2}{}%
+\contentsline {paragraph}{During the last two decades in the feild of cybersecurity, many \nobreak incidents have taken place which has helped to bring the realm of cyber and infomation security to the place it is now}{2}{}%
+\contentsline {paragraph}{With events such as the 2013 data breach of MySpace where 360 million users had their login credentials stolen, in the same year the personal information of 3 billion Yahoo users was compromised.}{2}{}%
+\contentsline {paragraph}{Target was third-largest retailor in United States and operated numerous stores within Canada and U.S upto 2000 stores.}{2}{}%
+\contentsline {paragraph}{The attack occured during holiday season via the POS i.e point of sale machine where the information of 70 million customer and the credit card of 40 million users were also compromised.}{2}{}%
+\contentsline {section}{\numberline {0.2}Unfolding}{3}{}%
+\contentsline {subsection}{\numberline {0.2.1}Security}{3}{}%
+\contentsline {paragraph}{ Every cyber crime starts with a vulnerability.}{3}{}%
+\contentsline {subsection}{\numberline {0.2.2}Blunders}{3}{}%
+\contentsline {paragraph}{Even though they had such level of protection they failed to detect as well as prevent some:}{3}{}%
+\contentsline {subsection}{\numberline {0.2.3}Breach}{3}{}%
+\contentsline {subsubsection}{Phase: 1 Infection }{3}{}%
+\contentsline {paragraph}{\indent Using phishing emails the attackers were able to infect Fazio's system.}{3}{}%
+\contentsline {paragraph}{\indent After the access into the target's network through fazio mechanical the attackers were able to access Target's Ariba external billing system or the business section of Target.}{3}{}%
+\contentsline {subsubsection}{Phase: 2 PoS Infection }{4}{}%
+\contentsline {paragraph}{\indent They named this "Webs shell to look like a authentic file, now they had remote control over the Target's servers.}{4}{}%
+\contentsline {subsubsection}{Phase 3: Prvilege and extraction}{4}{}%
+\contentsline {paragraph}{\indent After the acess and the successful hijacking of the PoS systems the attackers were just a few steps away from entering and extracting the data but they were in need of privilege i.e Domain Admin privileges.}{4}{}%
+\contentsline {paragraph}{\indent After succesfully gaining access they used those privileges to create their own seperate Domain Access account}{4}{}%
+\contentsline {paragraph}{\indent During peak time they would harvest the info stored in the PoS systems}{4}{}%
+\contentsline {section}{\numberline {0.3}Consequences}{5}{}%
+\contentsline {paragraph}{After the attack was revealed a few weeks, Target faced numerous lawsuits from various parties.}{5}{}%
+\contentsline {section}{\numberline {0.4}Methodologies}{6}{}%
+\contentsline {paragraph}{Here we will go indepth about the malware and exploits used and their functionalities:}{6}{}%
