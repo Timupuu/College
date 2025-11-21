@@ -78,5 +78,8 @@
     <requires type="dynamic">
       <file>reportTarget.bcf</file>
     </requires>
+    <requires type="editable">
+      <file>reportTarget.bib</file>
+    </requires>
   </external>
 </requests>

@@ -217,3 +217,129 @@ Reasons for segmentation of networks:
   >>Can be used to implement security policies
   >>Helps reduce number of devices if something goes wrong 
   >>They are also used for segmenting various locations, groups and devices
+
+11/19/2025
+  They learned subnetting I was absent at that time
+
+11/21/2025
+  Today is workshop
+
+10.10.0.0/26
+
+which means out subnet mask has 32 - 26 = 6 0's and there is a 2 in the last 8 bits
+the last eight bits are: 11000000
+which when changes into decimal is 2^7 + 2^6 which is 128 + 64 = 192
+subnet mask is 255.255.255.192
+now number of 1 i.e n = 2 and the number of 0's i.e h is 6
+number of subnets = 2^n = 2^2 = 4
+number of hosts per subnet = 2^h -2 = 2^6 - 2 = 64-2 = 62
+ 
+  // Start subnetting from highest number of hosts //
+  
+  Part.1
+  Subnet - 100 hosts
+    Formula: 2^h - 2 = no.of hosts
+             2^h -2 = 100
+             2^h = 100+2
+             2^h = 102 // The closest 2^h integer is 128 i.e 2^7
+             2^h = 2^7
+             h = 7 which is no of 0's in the last 8 bits
+
+    Subnet mask in binary: 11111111.11111111.11111111.10000000
+    subnet mask is 255.255.255.128
+    CIDR notation (It is the no of 1's when written in binary)
+    therefore the CIDR notation here is 25 
+
+    now block size 
+    block size is 256 - last block 
+    = 256 - 128
+    = 128
+
+    Therefore the subnets are 0, 128
+
+    Network Address | First Usable IP | Last Usable IP | Broadcast Address |
+    192.168.0.0       192.168.0.1       192.168.0.126     192.168.0.127
+
+    192.168.0.128  
+
+    Subnet - 60 hosts
+    we have 2^h -2 = no of hosts
+            2^h - 2 = 60
+            2^h = 60 +2 
+            2^h = 62  // The closest 2^h integer is 64 therefore the value of h is 6
+            2^h = 2^6
+            h = 6
+
+            which means there are 6 0's in the last 8 bits and 2 are 1's
+            therefore the last 8 bits will be 11000000
+            these 8 bits represent 2^7 + 2^6 = 128+64 = 192
+            therefore the subnet mask will be 255.255.255.192
+            CIDR notation will be 24 + 2 = 26 
+
+            Block size = 256 - 192
+                       = 64 
+
+            since we have used until 192.168.0.128 now we start from there
+
+    Network Address | First Usable IP | Last Usable IP | Broadcast Address |
+    192.168.0.128     192.168.0.129     192.168.0.190    192.168.0.191
+    192.168.0.192     
+
+    Subnet hosts - 2
+    we have 2^h - 2 = no of hosts
+            2^h - 2 = 20
+            2^h = 20+2
+            2^h = 22
+            2^h = 2^5 // The closest is 32 
+            h = 5
+
+            hence there are 5 0's in the last 8 bits and 3 1's 
+            The last 8 bits are 11100000
+            The value represented is 2^7+2^6+2^5 = 128+64+32
+                                                 =  224
+
+            The CIDR notation will be /27 
+
+            Block size = 256-224 = 32
+  
+   Network Address | First Usable IP | Last Usable IP | Broadcast Address
+   192.168.0.192     192.168.0.193     192.168.0.222      192.168.0.223
+   192.168.0.224
+
+   10.10.0.0/16
+
+   a. 220 hosts
+
+   2^h-2= no of hosts
+   2^h  = 220+2 
+   2^h =  224
+   2^h = 2^8 // The closest is 256 i.e 2^8
+   h=8
+   
+   The last 8 digits contains 8 0's and 0 1's
+   The last 8 bits are 00000000
+   The decimal value is 2^8 = 256
+   Therefore the block size is 256
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.0.0          10.10.0.1            10.10.0.254     10.10.0.255
+   10.10.1.0
+   
+   b. 98 hosts
+
+   2^h-2= no of hosts
+   2^h  = 98+2 
+   2^h =  100
+   2^h = 2^8 // The closest is 256 i.e 2^8
+   h=7
+
+   There are 7 0's and 1 1 
+   The last 8 bits are 10000000
+   The decimal value is 128
+   Block size is 25-128=128
+   
+   Network Address | First Usable Address | Last Usable Address | Broadcast Address
+   10.10.1.0         10.10.1.1               10.10.1.126          10.10.1.127 
+   10.10.1.128
+
+

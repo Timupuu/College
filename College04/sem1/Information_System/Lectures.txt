@@ -73,8 +73,8 @@ Various queries were done, making database, creating tables and data was inserte
 
 11/17/2025
 
-
-
+11/20/2025
+Today is workshop. We created a  database myStore then a table suppliers with primary key supplier id name address and phone number and multiple other stuffs nothing new. 
 
 
 

@@ -25,4 +25,3 @@
 \contentsline {paragraph}{Here we will go indepth about the malware and exploits used and their functionalities:}{6}{}%
 \contentsline {section}{\numberline {0.5}Conclusion}{8}{}%
 \contentsline {paragraph}{From this cyber attack we can conclude how outsourcing was one of the major instigator of this whole event.}{8}{}%
-\contentsline {section}{\numberline {0.6}Bibliography}{9}{}%
