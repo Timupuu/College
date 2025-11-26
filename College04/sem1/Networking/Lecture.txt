@@ -336,10 +336,82 @@ number of hosts per subnet = 2^h -2 = 2^6 - 2 = 64-2 = 62
    There are 7 0's and 1 1 
    The last 8 bits are 10000000
    The decimal value is 128
-   Block size is 25-128=128
+   Block size is 256-128=128
    
    Network Address | First Usable Address | Last Usable Address | Broadcast Address
    10.10.1.0         10.10.1.1               10.10.1.126          10.10.1.127 
    10.10.1.128
+
+2025-11-26 
+Subnet 10.10.0.0/16
+  a. 250 hosts
+  2^h -2 = no of hosts
+  2^h = 250 + 2 
+  2^h = 252     // which is closest to 258 therefore
+  2^h = 2^8
+  h = 8 
+  the last 8 digits are 0's and no 1's 
+  the last 8 bits are 00000000
+  the decimal value is 2^0 = 0 
+  therefore the block size is 256-0 = 256
+
+  
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.0.0          10.10.0.1            10.10.0.254     10.10.0.255
+   10.10.1.0 
+
+ b. 148 hosts
+    2^h -2 = 148
+    2^h = 150 // 128 is less than 150 and only 256 is greater than 150 
+    therefore h = 8
+
+    the last 8 digits are 00000000
+    decimal value is 256-0 
+    the block value is 256
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.1.0          10.10.1.1            10.10.1.254     10.10.1.255
+   10.10.2.0 
+
+
+c. 120 hosts
+    h = 7
+    1000000
+    which is 128 
+    block size is 256-128 = 128
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.2.0          10.10.2.1            10.10.2.126     10.10.2.127
+
+   172.16.0.0 
+   
+   a. 1000 hosts 
+   h = 10 as 1024  is the closest 
+   the last 16 digits are 11111100.00000000
+   the decimal value is 252.0 
+   since we have progressed to another block we need increment value that is the value of the last 1 in the other block 
+   we had 11111100.00000000
+   here the last block is in the 3rd block and t represents 4 therefore the increment value is 4
+
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   172.16.0.0          176.16.0.1            176.16.3.254     172.16.3.255
+   172.16.4.0 
+
+   b. 500 hosts
+   h = 9 as 512 is closest
+   the increment value is 2 
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   172.16.4.0          172.16.4.1            172.16.5.254     172.16.5.255
+   172.16.6.0 
+
+
+  c. 200 hosts 
+  h = 8 and there is no increment value 
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   172.16.6.0          172.16.6.1            172.16.6.254     172.16.6.255
+   172.16.7.0 
 
 
