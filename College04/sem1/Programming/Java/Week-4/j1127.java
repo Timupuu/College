@@ -82,7 +82,8 @@ public class j1127
     double price = scanner.nextDouble();
     System.out.println("Enter the category: ");
     char cat = scanner.next().charAt(0);
-    if(cat == 'a' || cat == 'A'){
+    //Else if ladder
+    /**if(cat == 'a' || cat == 'A'){
         double sp = price - (price*0.6);
         System.out.println("The selling price of that product of category "+ cat+ " is "+ sp);
     }
@@ -100,6 +101,31 @@ public class j1127
     }
     else{
     System.out.println("Invalid");
+    }*/
+    
+    //Switch
+    switch(cat){
+    
+    case 'A':
+    case 'a':
+        double sp = price - (price*0.6);
+        System.out.println("The selling price of that product of category "+ cat+ " is "+ sp);
+        break;
+    case 'B':
+    case 'b':
+         sp = price - (price*0.4);
+        System.out.println("The selling price of that product of category "+ cat+ " is "+ sp);
+        break;
+    case 'c':
+    case 'C':
+         sp = price - (price*0.2);
+        System.out.println("The selling price of that product of category "+ cat+ " is "+ sp);
+        break;
+    case 'D':
+    case 'd':
+         sp = price - (price*0.1);
+        System.out.println("The selling price of that product of category "+ cat+ " is "+ sp);
+        break;
     }
     }
 }
