@@ -414,4 +414,96 @@ c. 120 hosts
    172.16.6.0          172.16.6.1            172.16.6.254     172.16.6.255
    172.16.7.0 
 
+11/28/2025
+
+Subnet 192.168.1.0/25 
+lan A 20 hosts
+lan B 39 hosts
+
+lan B 39 hosts
+
+  the closest is 2^6 that is 64 therefore h=6
+   there are 6 0's and the first 2 digits are 1's
+   11000000 which is 128+64=-192
+   block size = 256-192=94
+
+   Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   192.168.1.0        162.168.1.1         192.168.1.93      192.168.1.94
+   192.168.1.95
+
+lan A 20 hosts 
+
+  the closest value is 32 which is 2^5 so h=5 
+  the last 8 digits are 11100000 decimal value is 128+64+32=216
+  block size = 256-216=40
+ 
+ Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   192.168.1.95        162.168.1.96         192.168.1.34      192.168.1.35
+   192.168.1.36
+
+   122.16.0.0/16 
+   lan A 3000 hosts
+   the closest is 4096 which is 2^13
+   h = 13 the last 13 digits are 0 
+   11100000.00000000
+   The increment value is 32
+
+ Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   122.16.0.0        122.16.0.1         192.168.31.254      192.168.31.255
+   122.16.32.0
+
+  lan b 30 hosts closest is 32 h= 5 the block size is 256-216=40
+   
+   Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   122.168.32.0        122.16.32.1         122.16.1.39      122.16.1.40
+   122.16.1.41
+
+  10.10.10.0/8
+
+  for 2000 hosts 
+    h= 11
+    closest is 2048
+    increment size is 8
+
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   10.10.10.0        10.10.10.1         10.10.17.254      10.10.17.255
+   10.10.18.0
+
+for 1000 hosts
+  h = 10 
+  increment size is 4
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   10.10.18.0        10.10.18.1         10.10.21.254      10.10.21.255
+   10.10.22.0
+
+
+for 450 hosts
+  h = 9
+  increment size is 2 
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   10.10.22.0        10.10.22.1         10.10.23.254      10.10.23.255
+   10.10.24.0
+
+
+From workshop file 
+
+  192.168.1.0/28
+  32-28 = 4 meaning 4 0's are in the last 8 digits
+  the decimal value would be 255.255.255.240
+  which is 11110000
+  no of subnets = 2^n where n is no of 1's in the last 8 digits
+  2^4 = 16
+  the no of 0's represents h 
+  now number of hosts => 2^4-2
+                      => 16-2
+                      => 14
+  block size is 256-240 = 16
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   192.168.1.0        192.168.1.1         192.168.1.15      192.168.1.16
+   192.168.1.17
+
 
