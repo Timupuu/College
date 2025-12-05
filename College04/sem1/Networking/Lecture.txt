@@ -506,4 +506,59 @@ Network Address    First Usable IP     Last Usable IP    Broadcast Address
    192.168.1.0        192.168.1.1         192.168.1.15      192.168.1.16
    192.168.1.17
 
+12/03/2025
 
+Given ip address: 198.22.45.173/26
+26 means there are 26 1's and 6 0's 
+the last 16 bits are: 
+11111111.11000000
+the subnet mask is 255.255.255.192
+no of hosts = 2^h -2 
+            = 2^6 - 2 
+            = 64 -2 
+            = 62
+block size = 256 - 192
+           = 64
+no of subnets = 2^2 = 4
+Network address  First usable Ip  Last usable Ip   Broadcast address
+198.22.45.128    192.22.45.129    192.22.45.190     192.22.45.191
+198.22.45.192
+
+Given ip address: 172.16.44.99/29
+29 means there are 29 1's and 3 0's 
+the last 8 bits are:
+11111000
+the subnet mask is
+255.255.255.248
+block size is 256 - 248 = 8
+
+Network address  First usable Ip  Last usable Ip   Broadcast address
+172.16.44.96     172.16.44.97     172.16.44.92     172.16.44.93
+172.16.44.94
+
+Given ip address: 192.168.2.14/30
+the subnet mask is 255.255.255.252
+block size = 256-252 = 4
+
+Network address  First usable Ip  Last usable Ip   Broadcast address
+198.168.2.12     198.168.2.13      198.168.2.14     198.168.2.15
+198.168.2.16
+
+12/05/2025
+for 50 hosts
+2^h-2=50
+h=6
+last 8 bits
+11000000
+=192
+block size = 64
+
+
+Network address  First usable Ip   Last Usable Ip    Broadcast address
+192.168.0.0      192.168.0.1       192.168.0.62      192.168.0.63
+192.168.0.64     192.168.0.65      192.168.0.126     192.168.0.127
+192.168.0.128    192.168.0.129     192.168.0.190     192.168.0.191
+192.168.0.192    192.168.0.193     192.168.0.254     192.168.0.255
+192.168.1.0 
+
+Insert First usable ip of lan A into Gig0/0 of custom router
