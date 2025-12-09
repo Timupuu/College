@@ -74,7 +74,19 @@ Various queries were done, making database, creating tables and data was inserte
 11/17/2025
 
 11/20/2025
-Today is workshop. We created a  database myStore then a table suppliers with primary key supplier id name address and phone number and multiple other stuffs nothing new. A
+Today is workshop. We created a  database myStore then a table suppliers with primary key supplier id name address and phone number and multiple other stuffs nothing new. 
 
+12/09/2025
+Business rules;
+1. One user has one account (attributes userID, username, email and regdate)
+2. many user can create multiple playlist
+3. many playlist can contain multiple songs
+4. an artist can have multiple songs (artist attributes artist ID, stage name and country) (one song has attributes songId song title, duration and release date)
 
+Entities;
+1. User (userID, username, email, reg-date)
+2. Artist (artistID, stagename, country)
+3. Playlist 
+4. Song (songID, title, duration, release date)
+5. Playlist_Song
 
