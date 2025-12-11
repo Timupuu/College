@@ -106,3 +106,16 @@ CISO
     *> DRP: Disaster recovery plan 
 >>
 
+
+12/10/2025
+
+Threat Actor 
+|
+|->> ATP : advanced sophisticated example: fancybear, cozybear
+| 
+|->> 
+|
+|
+|
+|
+|

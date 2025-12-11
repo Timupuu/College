@@ -562,3 +562,34 @@ Network address  First usable Ip   Last Usable Ip    Broadcast address
 192.168.1.0 
 
 Insert First usable ip of lan A into Gig0/0 of custom router
+
+
+12/10/2025
+
+
+example ipv6 address
+abcf:0000:01f3:000f:0012:0000:0000:000f
+can also be written as 
+abcf:0:1f3:f:12::f 
+
+Rules: 
+    >> Remove any leading 0's i.e 0000 is only 0 and 0012 is only 12
+    >> Consecutive blocks of all 0's can be written as :: (only to be used once) i.e a:0000:0000:b is a::b 
+
+example
+abcf:0000:01f3:000f:0012:0000:0000:0000
+can also be written as 
+abcf:0:1f3:f:12::
+
+GUA: Global unicast address
+LLA: Link local address
+
+GUA: <-----64 bit -----><-----64 bit ----->
+      Prefix length       Interface ID 
+
+     <---48 bit ---> <--16 bit--><-----64 bit ----->
+      Global Routing   Subnet ID   Interface ID 
+         Prefix 
+
+
+
