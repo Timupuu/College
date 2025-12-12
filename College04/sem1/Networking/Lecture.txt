@@ -592,4 +592,16 @@ GUA: <-----64 bit -----><-----64 bit ----->
          Prefix 
 
 
+12/12/2025
+
+2001:cab:cafe:0010:fab::00b/48
+
+which means network address is 
+2001:cab:cafe:10::
+The subnets would be 
+2001:cab:caff::
+2001:cab:cb00::
+2001:cab:cb01::
+2001:cab:cb02::
+2001:cab:cb03::
 

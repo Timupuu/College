@@ -144,3 +144,13 @@ Reasons for segmentation of networks:
   >>Helps reduce number of devices if something goes wrong 
   >>They are also used for segmenting various locations, groups and devices
 
+
+12/12/2025
+
+In global configuration mode:
+ipv6 unicast-routing
+
+interface gig0/1
+ipv6 address ___________
+ipv6 address ___________ link-local
+no shutdown
