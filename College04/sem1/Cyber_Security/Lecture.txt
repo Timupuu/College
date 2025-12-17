@@ -119,3 +119,22 @@ Threat Actor
 |
 |
 |
+
+
+
+
+12/17/2025
+
+Social Engineering: Human manipulation trust and emotions. 
+
+Phishing:
+|
+|-->> Spear Phishing: Involves a specific or certain target.
+      Pre texting: 
+      |-->> Tailgating: follow very closely 
+
+|-->> Vishing: Via phone calls
+|-->> Smishing: Via sms
+|-->> Whailing: Targeting a high target individual
+
+Impersonation: 
