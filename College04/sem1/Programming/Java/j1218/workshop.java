@@ -72,6 +72,69 @@ if(raj.salary > har.salary){
 }
 }*/ 
 
+// Usage of Laptop object and class 
+/** class ltop{
+  int ram;
+  String name;
+  double price;
+
+  public ltop(int ram, String name, double price){
+  this.ram = ram;
+  this.name = name;
+  this.price = price;
+  }
+}
+public class workshop{
+public static void main(String[] args) {
+  ltop Lenovo = new ltop();
+  Lenovo.ram = 8;
+  Lenovo.name = "Lenovo";
+  Lenovo.price = 200;
+  ltop Mac  = new ltop();
+  Mac.ram = 12;
+  Mac.name = "Mac";
+  Mac.price = 300;
+  ltop Acer = new ltop();
+  Acer.ram = 16;
+  Acer.name = "Acer";
+  Acer.price = 400;
+  System.out.println(Lenovo.ram + " " + Lenovo.name + " " + Lenovo.price);
+
+  if(Lenovo.ram > Mac.ram && Lenovo.ram > Acer.ram){  
+      System.out.println("The highest ram is of " + Lenovo.name);
+    }
+  else if(Mac.ram > Acer.ram && Mac.ram > Lenovo.ram){
+          System.out.println("The highest ram is of " + Mac.name);
+    }
+    else {
+    System.out.println("The highest ram is of " + Acer.name);    
+      }  
+  }
+}
+*/ 
+class Mobile{
+  String brand;
+  double price;
+
+  isAffodable(double a){
+    if(a < 20000){
+      System.out.println("The phone is is affodable");
+    }
+  }
+}
+
+public class workshop{
+  public static void main(String[] args) {
+    Mobile iPhone = new Mobile();
+    Mobile galaxy = new Mobile();
+    Mobile pcoc = new Mobile();
+    iPhone.brand = "Iphone";
+    iPhone.price = 120000;
+    galaxy.brand = "Samsung";
+
+  }
+}
+
 
 
 
