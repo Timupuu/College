@@ -138,3 +138,8 @@ Phishing:
 |-->> Whailing: Targeting a high target individual
 
 Impersonation: 
+
+FTP: File transport protocol
+Single point of accountability: 
+
+Broken authentication: 

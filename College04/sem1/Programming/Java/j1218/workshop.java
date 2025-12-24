@@ -78,12 +78,7 @@ if(raj.salary > har.salary){
   String name;
   double price;
 
-  public ltop(int ram, String name, double price){
-  this.ram = ram;
-  this.name = name;
-  this.price = price;
-  }
-}
+ }
 public class workshop{
 public static void main(String[] args) {
   ltop Lenovo = new ltop();
@@ -116,10 +111,14 @@ class Mobile{
   String brand;
   double price;
 
-  isAffodable(double a){
+  public isAffodable(double a){
     if(a < 20000){
-      System.out.println("The phone is is affodable");
+      System.out.println("The phone is is affordable");
     }
+    else{
+      System.out.println("This phone is not affordable");
+    }
+
   }
 }
 
@@ -131,6 +130,12 @@ public class workshop{
     iPhone.brand = "Iphone";
     iPhone.price = 120000;
     galaxy.brand = "Samsung";
+    galaxy.price = 100000;
+    pcoc.brand = "Poco";
+    pcoc.price = 15000;
+    Mobile.isAffodable(iPhone.price);
+    Mobile.isAffodable(galaxy.price);
+    Mobile.isAffodable(pcoc.price);
 
   }
 }

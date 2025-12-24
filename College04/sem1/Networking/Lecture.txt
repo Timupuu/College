@@ -605,3 +605,13 @@ The subnets would be
 2001:cab:cb02::
 2001:cab:cb03::
 
+
+12/24/2025
+
+Telnet & SSH 
+They are the application layer protocol (Top layer protocol) which is used to remotely access and manage the network devices.
+
+Telnet: It sends the data over the network in plain text format. 
+SSH: It sends the data over the network in encrypted format.
+
+
