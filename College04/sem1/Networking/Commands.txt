@@ -154,3 +154,35 @@ interface gig0/1
 ipv6 address ___________
 ipv6 address ___________ link-local
 no shutdown
+
+12/26/2025
+In global config mode
+
+Encrypt all plaintext password
+-->service password-encryption
+
+Setting minimum length to 10
+-->security password min-length 10
+
+Disable dns domain-lookup
+-->no ip domain-lookup
+
+Setting domain name
+-->ip domain-name CCNA.com 
+
+Creating a user with password (encrypted)
+-->username timupuu secret ciscocisco
+
+generate rsa keys
+-->crypto key generate rsa
+
+Block login for x seconds for n number of attempts within y second period 
+-->login block-for x attempts n within y
+
+
+working on a number of interfaces at once
+-->interface range f0/2-24, g0/2
+// this will select all the interfaces in that range 
+
+change telnet into ssh 
+-->transport input ssh
