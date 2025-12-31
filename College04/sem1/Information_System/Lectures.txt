@@ -90,3 +90,8 @@ Entities;
 4. Song (songID, title, duration, release date)
 5. Playlist_Song
 
+12/30/2025
+
+The syntax to join 
+select * from suppliers join items on suppliers.name = items.supplier;
+
