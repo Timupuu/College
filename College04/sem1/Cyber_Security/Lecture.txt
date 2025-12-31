@@ -91,3 +91,55 @@ Outsourcing:
 
   Hashing: 
 
+
+11/26/2025
+
+SIEM 
+SOC Defense department 
+CISO 
+
+>> 0 day attack: Such a attack where the vendor or the developers are not aware about and their isn't any patches either. 
+>> Stuxnet: 
+>> Backdoor: Bypasses normal authentication used for remote access.
+>>Contingency plan Requires IT infrastructure
+    *> BCP: Business continuity plan
+    *> DRP: Disaster recovery plan 
+>>
+
+
+12/10/2025
+
+Threat Actor 
+|
+|->> ATP : advanced sophisticated example: fancybear, cozybear
+| 
+|->> 
+|
+|
+|
+|
+|
+
+
+
+
+12/17/2025
+
+Social Engineering: Human manipulation trust and emotions. 
+
+Phishing:
+|
+|-->> Spear Phishing: Involves a specific or certain target.
+      Pre texting: 
+      |-->> Tailgating: follow very closely 
+
+|-->> Vishing: Via phone calls
+|-->> Smishing: Via sms
+|-->> Whailing: Targeting a high target individual
+
+Impersonation: 
+
+FTP: File transport protocol
+Single point of accountability: 
+
+Broken authentication: 

@@ -183,3 +183,435 @@ Command modes: {Use '?' to see all the command in each mode of the terminal} {us
 then we enter the user exec mode
 then use the encrypted password to change into global configuration mode
   
+
+11/17/2025
+
+Bit: Either 0 or 1
+
+Ip address is a logical address.
+  which is designated to specific location of a device on a network.
+
+Ipv4 address = 32 bit
+
+Within each network there are three types of IP addresses:
+  >> Network address
+  >> Host address
+  >> Broadcast address
+
+
+Methods of communications:
+  Unicast: One to one communication 
+  Broadcast: One to all communication in a network segment
+  Multicast: One to many communication
+
+Private ip address ranges
++---------------------------+--------------------------------+
+| Network Address and prefix|RFC 1918 Private address range  |
+--------------------------------------------------------------
+10.0.0.0/8                      10.0.0.0 - 10.255.255.255
+172.16.0.0/12                   172.16.0.0 - 172.31.255.255
+192.168.0.0/16                  192.168.0.0 - 192.168.255.255
+
+Reasons for segmentation of networks:
+  >>Reduces overall network traffic and improve Efficiency
+  >>Can be used to implement security policies
+  >>Helps reduce number of devices if something goes wrong 
+  >>They are also used for segmenting various locations, groups and devices
+
+11/19/2025
+  They learned subnetting I was absent at that time
+
+11/21/2025
+  Today is workshop
+
+10.10.0.0/26
+
+which means out subnet mask has 32 - 26 = 6 0's and there is a 2 in the last 8 bits
+the last eight bits are: 11000000
+which when changes into decimal is 2^7 + 2^6 which is 128 + 64 = 192
+subnet mask is 255.255.255.192
+now number of 1 i.e n = 2 and the number of 0's i.e h is 6
+number of subnets = 2^n = 2^2 = 4
+number of hosts per subnet = 2^h -2 = 2^6 - 2 = 64-2 = 62
+ 
+  // Start subnetting from highest number of hosts //
+  
+  Part.1
+  Subnet - 100 hosts
+    Formula: 2^h - 2 = no.of hosts
+             2^h -2 = 100
+             2^h = 100+2
+             2^h = 102 // The closest 2^h integer is 128 i.e 2^7
+             2^h = 2^7
+             h = 7 which is no of 0's in the last 8 bits
+
+    Subnet mask in binary: 11111111.11111111.11111111.10000000
+    subnet mask is 255.255.255.128
+    CIDR notation (It is the no of 1's when written in binary)
+    therefore the CIDR notation here is 25 
+
+    now block size 
+    block size is 256 - last block 
+    = 256 - 128
+    = 128
+
+    Therefore the subnets are 0, 128
+
+    Network Address | First Usable IP | Last Usable IP | Broadcast Address |
+    192.168.0.0       192.168.0.1       192.168.0.126     192.168.0.127
+
+    192.168.0.128  
+
+    Subnet - 60 hosts
+    we have 2^h -2 = no of hosts
+            2^h - 2 = 60
+            2^h = 60 +2 
+            2^h = 62  // The closest 2^h integer is 64 therefore the value of h is 6
+            2^h = 2^6
+            h = 6
+
+            which means there are 6 0's in the last 8 bits and 2 are 1's
+            therefore the last 8 bits will be 11000000
+            these 8 bits represent 2^7 + 2^6 = 128+64 = 192
+            therefore the subnet mask will be 255.255.255.192
+            CIDR notation will be 24 + 2 = 26 
+
+            Block size = 256 - 192
+                       = 64 
+
+            since we have used until 192.168.0.128 now we start from there
+
+    Network Address | First Usable IP | Last Usable IP | Broadcast Address |
+    192.168.0.128     192.168.0.129     192.168.0.190    192.168.0.191
+    192.168.0.192     
+
+    Subnet hosts - 2
+    we have 2^h - 2 = no of hosts
+            2^h - 2 = 20
+            2^h = 20+2
+            2^h = 22
+            2^h = 2^5 // The closest is 32 
+            h = 5
+
+            hence there are 5 0's in the last 8 bits and 3 1's 
+            The last 8 bits are 11100000
+            The value represented is 2^7+2^6+2^5 = 128+64+32
+                                                 =  224
+
+            The CIDR notation will be /27 
+
+            Block size = 256-224 = 32
+  
+   Network Address | First Usable IP | Last Usable IP | Broadcast Address
+   192.168.0.192     192.168.0.193     192.168.0.222      192.168.0.223
+   192.168.0.224
+
+   10.10.0.0/16
+
+   a. 220 hosts
+
+   2^h-2= no of hosts
+   2^h  = 220+2 
+   2^h =  224
+   2^h = 2^8 // The closest is 256 i.e 2^8
+   h=8
+   
+   The last 8 digits contains 8 0's and 0 1's
+   The last 8 bits are 00000000
+   The decimal value is 2^8 = 256
+   Therefore the block size is 256
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.0.0          10.10.0.1            10.10.0.254     10.10.0.255
+   10.10.1.0
+   
+   b. 98 hosts
+
+   2^h-2= no of hosts
+   2^h  = 98+2 
+   2^h =  100
+   2^h = 2^8 // The closest is 256 i.e 2^8
+   h=7
+
+   There are 7 0's and 1 1 
+   The last 8 bits are 10000000
+   The decimal value is 128
+   Block size is 256-128=128
+   
+   Network Address | First Usable Address | Last Usable Address | Broadcast Address
+   10.10.1.0         10.10.1.1               10.10.1.126          10.10.1.127 
+   10.10.1.128
+
+2025-11-26 
+Subnet 10.10.0.0/16
+  a. 250 hosts
+  2^h -2 = no of hosts
+  2^h = 250 + 2 
+  2^h = 252     // which is closest to 258 therefore
+  2^h = 2^8
+  h = 8 
+  the last 8 digits are 0's and no 1's 
+  the last 8 bits are 00000000
+  the decimal value is 2^0 = 0 
+  therefore the block size is 256-0 = 256
+
+  
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.0.0          10.10.0.1            10.10.0.254     10.10.0.255
+   10.10.1.0 
+
+ b. 148 hosts
+    2^h -2 = 148
+    2^h = 150 // 128 is less than 150 and only 256 is greater than 150 
+    therefore h = 8
+
+    the last 8 digits are 00000000
+    decimal value is 256-0 
+    the block value is 256
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.1.0          10.10.1.1            10.10.1.254     10.10.1.255
+   10.10.2.0 
+
+
+c. 120 hosts
+    h = 7
+    1000000
+    which is 128 
+    block size is 256-128 = 128
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   10.10.2.0          10.10.2.1            10.10.2.126     10.10.2.127
+
+   172.16.0.0 
+   
+   a. 1000 hosts 
+   h = 10 as 1024  is the closest 
+   the last 16 digits are 11111100.00000000
+   the decimal value is 252.0 
+   since we have progressed to another block we need increment value that is the value of the last 1 in the other block 
+   we had 11111100.00000000
+   here the last block is in the 3rd block and t represents 4 therefore the increment value is 4
+
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   172.16.0.0          176.16.0.1            176.16.3.254     172.16.3.255
+   172.16.4.0 
+
+   b. 500 hosts
+   h = 9 as 512 is closest
+   the increment value is 2 
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   172.16.4.0          172.16.4.1            172.16.5.254     172.16.5.255
+   172.16.6.0 
+
+
+  c. 200 hosts 
+  h = 8 and there is no increment value 
+
+   Network Address  | First usable IP   | Last Usable IP  | Broadcast Address 
+   172.16.6.0          172.16.6.1            172.16.6.254     172.16.6.255
+   172.16.7.0 
+
+11/28/2025
+
+Subnet 192.168.1.0/25 
+lan A 20 hosts
+lan B 39 hosts
+
+lan B 39 hosts
+
+  the closest is 2^6 that is 64 therefore h=6
+   there are 6 0's and the first 2 digits are 1's
+   11000000 which is 128+64=-192
+   block size = 256-192=94
+
+   Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   192.168.1.0        162.168.1.1         192.168.1.93      192.168.1.94
+   192.168.1.95
+
+lan A 20 hosts 
+
+  the closest value is 32 which is 2^5 so h=5 
+  the last 8 digits are 11100000 decimal value is 128+64+32=216
+  block size = 256-216=40
+ 
+ Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   192.168.1.95        162.168.1.96         192.168.1.34      192.168.1.35
+   192.168.1.36
+
+   122.16.0.0/16 
+   lan A 3000 hosts
+   the closest is 4096 which is 2^13
+   h = 13 the last 13 digits are 0 
+   11100000.00000000
+   The increment value is 32
+
+ Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   122.16.0.0        122.16.0.1         192.168.31.254      192.168.31.255
+   122.16.32.0
+
+  lan b 30 hosts closest is 32 h= 5 the block size is 256-216=40
+   
+   Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   122.168.32.0        122.16.32.1         122.16.1.39      122.16.1.40
+   122.16.1.41
+
+  10.10.10.0/8
+
+  for 2000 hosts 
+    h= 11
+    closest is 2048
+    increment size is 8
+
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   10.10.10.0        10.10.10.1         10.10.17.254      10.10.17.255
+   10.10.18.0
+
+for 1000 hosts
+  h = 10 
+  increment size is 4
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   10.10.18.0        10.10.18.1         10.10.21.254      10.10.21.255
+   10.10.22.0
+
+
+for 450 hosts
+  h = 9
+  increment size is 2 
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   10.10.22.0        10.10.22.1         10.10.23.254      10.10.23.255
+   10.10.24.0
+
+
+From workshop file 
+
+  192.168.1.0/28
+  32-28 = 4 meaning 4 0's are in the last 8 digits
+  the decimal value would be 255.255.255.240
+  which is 11110000
+  no of subnets = 2^n where n is no of 1's in the last 8 digits
+  2^4 = 16
+  the no of 0's represents h 
+  now number of hosts => 2^4-2
+                      => 16-2
+                      => 14
+  block size is 256-240 = 16
+
+Network Address    First Usable IP     Last Usable IP    Broadcast Address
+   192.168.1.0        192.168.1.1         192.168.1.15      192.168.1.16
+   192.168.1.17
+
+12/03/2025
+
+Given ip address: 198.22.45.173/26
+26 means there are 26 1's and 6 0's 
+the last 16 bits are: 
+11111111.11000000
+the subnet mask is 255.255.255.192
+no of hosts = 2^h -2 
+            = 2^6 - 2 
+            = 64 -2 
+            = 62
+block size = 256 - 192
+           = 64
+no of subnets = 2^2 = 4
+Network address  First usable Ip  Last usable Ip   Broadcast address
+198.22.45.128    192.22.45.129    192.22.45.190     192.22.45.191
+198.22.45.192
+
+Given ip address: 172.16.44.99/29
+29 means there are 29 1's and 3 0's 
+the last 8 bits are:
+11111000
+the subnet mask is
+255.255.255.248
+block size is 256 - 248 = 8
+
+Network address  First usable Ip  Last usable Ip   Broadcast address
+172.16.44.96     172.16.44.97     172.16.44.92     172.16.44.93
+172.16.44.94
+
+Given ip address: 192.168.2.14/30
+the subnet mask is 255.255.255.252
+block size = 256-252 = 4
+
+Network address  First usable Ip  Last usable Ip   Broadcast address
+198.168.2.12     198.168.2.13      198.168.2.14     198.168.2.15
+198.168.2.16
+
+12/05/2025
+for 50 hosts
+2^h-2=50
+h=6
+last 8 bits
+11000000
+=192
+block size = 64
+
+
+Network address  First usable Ip   Last Usable Ip    Broadcast address
+192.168.0.0      192.168.0.1       192.168.0.62      192.168.0.63
+192.168.0.64     192.168.0.65      192.168.0.126     192.168.0.127
+192.168.0.128    192.168.0.129     192.168.0.190     192.168.0.191
+192.168.0.192    192.168.0.193     192.168.0.254     192.168.0.255
+192.168.1.0 
+
+Insert First usable ip of lan A into Gig0/0 of custom router
+
+
+12/10/2025
+
+
+example ipv6 address
+abcf:0000:01f3:000f:0012:0000:0000:000f
+can also be written as 
+abcf:0:1f3:f:12::f 
+
+Rules: 
+    >> Remove any leading 0's i.e 0000 is only 0 and 0012 is only 12
+    >> Consecutive blocks of all 0's can be written as :: (only to be used once) i.e a:0000:0000:b is a::b 
+
+example
+abcf:0000:01f3:000f:0012:0000:0000:0000
+can also be written as 
+abcf:0:1f3:f:12::
+
+GUA: Global unicast address
+LLA: Link local address
+
+GUA: <-----64 bit -----><-----64 bit ----->
+      Prefix length       Interface ID 
+
+     <---48 bit ---> <--16 bit--><-----64 bit ----->
+      Global Routing   Subnet ID   Interface ID 
+         Prefix 
+
+
+12/12/2025
+
+2001:cab:cafe:0010:fab::00b/48
+
+which means network address is 
+2001:cab:cafe:10::
+The subnets would be 
+2001:cab:caff::
+2001:cab:cb00::
+2001:cab:cb01::
+2001:cab:cb02::
+2001:cab:cb03::
+
+
+12/24/2025
+
+Telnet & SSH 
+They are the application layer protocol (Top layer protocol) which is used to remotely access and manage the network devices.
+
+Telnet: It sends the data over the network in plain text format. 
+SSH: It sends the data over the network in encrypted format.
+
+
