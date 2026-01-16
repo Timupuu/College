@@ -186,3 +186,8 @@ working on a number of interfaces at once
 
 change telnet into ssh 
 -->transport input ssh
+
+to login via locally stored usernames and password
+login local
+
+
