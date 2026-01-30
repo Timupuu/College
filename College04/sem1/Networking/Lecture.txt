@@ -614,4 +614,44 @@ They are the application layer protocol (Top layer protocol) which is used to re
 Telnet: It sends the data over the network in plain text format. 
 SSH: It sends the data over the network in encrypted format.
 
+12/31/2025
 
+DHCP client                           DHCP server
+|            DHCP Discover------------->|
+|<------- DHCP Offer                    |
+|            DHCP Request ------------->|
+|<------- DHCP Pack                     |
+
+DORA process 
+
+
+01/07/2026
+Domain name service
+
+Domain names were created to convert the numeric IP address into a simple, recognizable name.
+
+Fully qualified domain name (FQDns) such as https://www.cisco.com are much easier for people to remember than 198.133.219.25.
+
+The DNS protocol defines an automated service that matches resources names with the required numeric network address. IT includes the format for queries responses and data.
+
+The DNS server stores different types of resource records that are used to reoslve names. These records contain the name, address, and the type of record.
+
+Some of these record types are as follows:
+>> A -- An end device IPv4 address
+>> N -- An authoritative name server
+>> AAAA -- An end device IPv6 address(pronounced Quad-A)
+>>MX -- A main exchange record 
+
+DNS is like a phonebook. It contains the number of various places and institutions. If it doesn't contain what we want it will contact other and give us the contact.
+
+
+10.10.0.66/26
+The subnet mask is 255.255.255.192
+Block size is 256-192 = 64
+Network Address | First usable | Last usable | Broadcast 
+10.10.0.0         10.10.0.1     10.10.0.62    10.10.0.63
+10.10.0.64        10.10.0.65    10.10.0.12    10.10.0.127
+
+for /25 
+  Subnet mask is 255.255.255.128
+  Block size is 128 

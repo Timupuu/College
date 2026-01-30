@@ -74,3 +74,8 @@ The types of Inheritence are:
 
 Parent class is also known as base class and super class.
 Child class is also known as sub class and derived class.
+
+01/13/2026
+Abstraction is a concept of OOP that hides the internal working mechanism and shows only the necessary functionalities to the user. 
+To use Abstraction in java we nee only abstract class and interface 
+Inheritence is known as a IS-A relationship

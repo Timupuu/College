@@ -143,3 +143,67 @@ FTP: File transport protocol
 Single point of accountability: 
 
 Broken authentication: 
+
+
+12/31/2025
+
+Packet filtering firewall
+
+01/07/2026
+
+The five key areas of protection under UK cyber security essential scheme are: 
+1. Firewall
+2. User Access Control 
+  >> POLP: Principle of least privilege
+  >> RBAC: Role based access control
+  >> MFA: Multifactor authentication
+3. Secure Configuration 
+4. Malware protection 
+5. Security Update management 
+
+01/09/2026
+
+Application: HTTP, FTP, SSH , SMTP
+Presentation: TLS/SSL encryption & encodery
+Session: Session management
+Transport: TCP, UDP, ports 
+Network: TP & Router
+Data link: Ethernet Mac Address
+Physical: Cable, wifi
+
+QN 1
+The usb connection works on this basis: It connects to the device via physical layer, It can later change the mac addresses or the network frames via the data link layer. Here are how it conducts its attacks within the various layers of OSI. 
+1. **Physical Layer (Layer 1):**  
+   - Attacks like "USB Killer" damage hardware by sending electrical surges.
+
+2. **Data Link Layer (Layer 2):**  
+   - Malicious USB network adapters can manipulate MAC addresses or network frames.
+
+3. **Application Layer (Layer 7):**  
+   - Most malware delivery, HID attacks, and data theft occur here, as the USB device interacts with the operating system and applications.
+
+QN 2
+Generally dark web refers to that part of the web that is secluded or can't be easily accessed by the general users. Requiring specialized browsers and search engines to surf the dark web. It hosts various websites and to surf through it we need additional privacy and security. 
+The Dark Web is a part of the internet that is not indexed by standard search engines and requires special software to access, such as Tor or I2P. It is intentionally hidden and provides anonymity to users and website operators.
+
+01/14/2026
+
+01/16/2026
+
+1. Cyber warfare is considered a growing threat due to the growth of human dependency on technology, more sensitive data can be 
+1. **Increased Digital Dependence**: Governments, businesses, and critical infrastructure (power grids, hospitals, transportation) rely heavily on digital systems, making them vulnerable to cyber attacks.
+
+2. **Low Entry Barriers**: Cyber weapons are cheaper and easier to develop than traditional weapons. Even small groups or individuals can launch significant attacks.
+
+3. **Anonymity and Attribution**: Attackers can hide their identities and locations, making it difficult to attribute attacks and respond effectively.
+
+4. **Global Connectivity**: The interconnected nature of the internet means attacks can spread quickly across borders, affecting multiple countries simultaneously.
+
+5. **Potential for Massive Disruption**: Cyber attacks can disrupt essential services, steal sensitive data, manipulate information, and cause economic damage without physical violence.
+
+6. **Evolving Tactics**: Attack methods are constantly evolving, making defense challenging and requiring continuous adaptation.
+
+7. **State-Sponsored Actors**: More nations are developing offensive cyber capabilities, increasing the risk of state-sponsored cyber conflicts.
+
+These factors combine to make cyber war a significant and growing threat to national security, economies, and societies worldwide.
+
