@@ -61,3 +61,16 @@ syntax:
     boolean c = (a>b)? true : false;
     // the value of c will be false as a is less than 10 and we have assigned the valuse_if_false as false.
 
+
+12/30/2025
+
+One of the biggest advantage of Inheritence is code reuse.
+The types of Inheritence are:
+>> single
+>> multiple
+>> multi-level
+>> hierarchical
+>> hybrid
+
+Parent class is also known as base class and super class.
+Child class is also known as sub class and derived class.
