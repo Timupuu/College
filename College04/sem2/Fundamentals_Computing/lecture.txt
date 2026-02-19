@@ -1,0 +1,31 @@
+02/18/2026
+Today is workshop 
+
+Algorithm for addition of two numbers:
+Step 1: Take 2 numbers A & B 
+Step 2: Add 2 numbers together sum = A+B 
+Step 3: Output the sum of two numbers
+
+Algorithm for finding the greatest of 2 numbers 
+Step 1: Take 2 numbers A & B 
+Step 2: Check if A>B is true or false
+Step 3: Assign the greater value to great 
+Step 4: Display the great number according to the result
+
+Algorithm for sorting the two numbers in ascending order
+Step 1: Take 2 numbers
+Step 2: Compare the values
+Step 3: Assign the higher value to A and smaller value to B by using temp 
+Step 3: Output the numbers in order 
+
+Algorithm to find greatest of 3 numbers
+Step 1: Take 3 numbers A,B & C 
+Step 2: Compare if A is greater than B 
+  Step 2.1: If Step 2 is correct compare if A is greater than C
+    Step 2.1.1: If Step 2.1 is correct A is the greatest
+    Step 2.1.2: If Step 2.1 is incorrect C is the greatest
+  Step 2.2: If Step 2 is incorrect compare if B is greater than C 
+    Step 2.2.1: If Step 2.2 is correct B is the greatest
+    Step 2.2.2: If Step 2.2 is incorrect C is the greatest
+Step 3: Output the greatest number  
+
