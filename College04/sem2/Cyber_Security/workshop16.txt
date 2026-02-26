@@ -1,0 +1,75 @@
+Qn 1 
+  likelihood rating: 0.8
+  impact rating: 0.7
+  Overall risk level=?
+  Risk = likelihood * impact
+       = 0.8* 0.7
+       =0.56
+
+Qn.2 
+  likelihood rating = 0.3 
+  impact rating = 0.9
+  Risk = impact * likelihood 
+       = 0.3*0.9
+       = 0.27
+
+Qn.3
+  likelihood = 1
+  current controls = 0
+  asset value = 50
+  accuracy of data = 90%
+                   = 0.9
+  Therefore uncertainty = 0.1 
+
+  Risk = likelihood * asset value - current controls + uncertainty
+       = 1 * 50 - 0 + 0.1
+       = 50.1
+
+Qn.4
+  asset value = 75
+  likelihood = 0.7
+  current control = 30%
+                  = 0.3
+  accuracy of data = 90%
+  uncertainty = 0.1
+
+  Risk = likelihood * asset value - current controls + uncertainty
+       = 0.7 * 75 - 0.3 + 0.1
+       = 75.5
+
+Qn.5
+  asset value = 100
+  likelihood = 0.8, 0.6
+  current controls = 40% as 60% risk is present
+  accuracy of data = 80%
+  uncertainty = 0.2
+
+  Risk = likelihood * asset value - current controls + uncertainty
+       = (0.8+0.6) * 100 - 0.4 + 0.2
+       = 1.4*100 - 0.2
+       = 140 - 0.2
+       = 139.8
+
+Enterprise: Bank
+
+Risk Register Table 
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Risk ID | Risk Description | likelihood | impact | Risk score| Controls / Mitigation                                                                          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| R1      | Data Breach      | 5          | 5      | 25        | * Implement data encryption * Principle of least privilege * Reduction of outsourcing          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| R2      | Fire             | 1          | 3      | 3         | * Ensure digitization of written files & folders * Ensure data is backed up to main server     |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| R3      | Power Failure    | 5          | 2      | 10        | * Ensure proper connection of power * Regularly auto save data * Ensure off grid support       |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| R4      | Weak Password    | 4          | 5      | 20        | * Setup minimum criteria for password * Ensure login credentials are changed on regular basis  |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| R5      | Insider Tampering| 5          | 5      | 25        | * Implement principle of least privilege * Ensure logging and record of logins is kept         |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+
+

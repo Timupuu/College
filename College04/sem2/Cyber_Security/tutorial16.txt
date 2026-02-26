@@ -1,0 +1,25 @@
+02/19/2026
+Tutorial week 16
+1. Cyber risk are those things that pose a threat or potentially be dangerous to the intellectual online property, exploit data and compromise the confidentiality, availability and integrity of the data.
+
+2. Factors that affect risk are:
+  Probability
+  Impact that will have significant  effect
+
+3.We can quantify risk by using a percentage of risk which will help us to understand or visualize the probability or the chance that iy may occur
+
+4. We can calculate risk by using a very simple formula 
+    impact * probability = cost (risk)
+
+    risk = likelihood of occurance of vulnerability * value of information asset - % of risk mitigated by current  controls + uncertainity of current knowledge of vulnerability
+
+5. Steps to measure impact of risk
+  Direct cost
+  Indirect cost
+
+6. Different risk management methods
+  Avoidane: stop using outdated software
+  Reduction: Regular software update
+  transfer: cyber insurance
+  Acceptance Budgting for minor risks
+  

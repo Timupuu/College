@@ -1,5 +1,5 @@
 02/18/2026
-Today is workshop 
+Today is workshop
 
 Algorithm for addition of two numbers:
 Step 1: Take 2 numbers A & B 
@@ -29,3 +29,67 @@ Step 2: Compare if A is greater than B
     Step 2.2.2: If Step 2.2 is incorrect C is the greatest
 Step 3: Output the greatest number  
 
+02/25/2026
+Today is workshop
+
+1. Algorithm for arithmetic operators
+Step 1: Take 2 numbers A  & B 
+Step 2: Add the two numbers and store in sum
+Step 3: Subtract the two numbers and store in diff
+  Step 3.1: Subtract A from B if B > A 
+  Step 3.2: Subtract B from A if A > B 
+Step 4: Multiply the two numbers and store in pro 
+Step 5: Divide A by B and store in que
+Step 6: Find the reminder when A is divided by B and store in rem 
+Step 7: Find A to the power of B and store in expo
+Step 8: Output all the values 
+
+2.Algorithm for a hello world program
+Step 1: Print "Hello World!"
+
+3.Algorithm for printing hello name
+Step 1: Make a variable for name
+Step 2: Ask the user for their name and store in the variable name
+Step 3: Print "Hello {name}, have a nice day!" where name is the name input by the user 
+
+4.Algorithm for sum and diff
+Step 1: Take 2 numbers A & B 
+Step 2: Find the sum of A & B 
+Step 3: Find the diff of A & B 
+Step 4: Output the sum and diff
+
+5.Algorithm for finding (a+b)^3
+Step 1: Take two numbers A & B 
+Step 2: Find (a+b)^3 
+Step 3: Output the value of the expression
+
+6.Algorithm for calculation of circumference and area 
+Step 1: Take radius A 
+Step 2: Find the area of circle
+Step 3: Find the circumference of the circle
+Step 4: Output area and circumference
+
+7.Algorithm for rectangle's area and perimeter
+Step 1: Take length A and breath B 
+Step 2: Find area of the rectangle
+Step 3: Find perimeter of the rectangle
+Step 4: Output the area and perimeter
+
+8.Algorithm for find root in quadratic
+Step 1: Take the value of a,b and c 
+Step 2: find the root of the quadratic eqn
+Step 3: print the root solution
+
+9.Algorithm for swaping
+Step 1: Take two numbers A & B 
+Step 2: Put the value of B into temp 
+Step 3: Put the value of A into B 
+Step 4: Put the value of temp into A
+Step 5: Output the swapped values
+
+10.Algorithm for name and prices
+Step 1: Take the name and prices of all the products
+Step 2: Find the total cost 
+Step 3: Find the tax amount
+Step 4: Find the final cost 
+Step 5: Output the data in receipt form
