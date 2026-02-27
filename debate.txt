@@ -1,0 +1,14 @@
+Ethical hacking is not another form of cybercrime. 
+It constitutes the authorized access and exploitation of a system while being bounded by laws and contracts. 
+There are strict guidelines to exploit the system and continuous reporting to the employer regarding the exploit.
+There is a rule of thumb to do as much as told and if there are new paths or exploits are found they are to be reported to the employer.
+
+Points:
+1. It is the exploitation or penetration bounded by straight through contract and agreements
+2. It is more of like tinkering with a piece of software or program under the authorization/supervision of the owner
+3. It is done to push the system to its limits and find out the possible vulnerabilities
+4. Edward snowden doesn't fall under ethical hacking rather he is a whistle blower and its leaktivism/hacktivism (The case of snowden wasn't legal even though it was moral. Ethical hacking is legal and moral)
+5. It is done by professionals with certifications from internationally recognized organizations like EC-Council (E commerce) CompTIA (computing technology industry association)
+6. Major tech giants run bug bounty and hack-fest, they are also a epitome of the legality of ethical hacking. 
+7. Ethical hacking is done to harden the system and prevent illegal hackers to exploit the system.
+8. Same tools doesn't mean same purpose. A kitchen knife can cook food or harm someone it depends on the intent of the user. Intent matters
