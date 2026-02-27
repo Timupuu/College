@@ -1,0 +1,17 @@
+In Global config mode:
+  ipv6 dhcp pool R1-STATELESS
+      ** To create a dhcp pool
+        dns-server 2001:db8:1111:127
+          ** Providing dns ip to dhcpv6 pool
+        domain-name stateless.com 
+          ** Providing domain name to dhcpv6 pool
+  int g0/0
+    ipv6 dhcp server R1-STATELESS
+      ** same pool that we have created above
+    ipv6 nd other-config-flag
+      ** o flag has beeen up for stateless dhcpv6
+    ipv6 nd managed-config-flag
+      ** M flag has been up for stateless dhcpv6
+
+Change stateless to stateful for stateful dhcp
+
