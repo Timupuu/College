@@ -11,7 +11,7 @@ public class string2{
     System.out.println("Give me a string");
     stringa = scanner.nextLine();
     stringt = stringa.trim();
-    strings = stringa.substring(2,10);
+    strings = stringa.substring(0,9);
     stringsp = stringa.split(" ");
     
     System.out.println("The initial string was " + stringa);

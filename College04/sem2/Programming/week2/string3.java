@@ -1,33 +1,31 @@
-
-/**
- * Write a description of class string3 here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import java.util.Scanner;
 public class string3
 {
-    // instance variables - replace the example below with your own
-    private int x;
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+      String input = new String();
+      System.out.println("Give me a string");
+      input = scanner.nextLine();
+      int index;
+      System.out.println("Give me an index");
+      index = scanner.nextInt();
+      scanner.nextLine();
+      char at;
+      at = input.charAt(index);
+      System.out.println("The character at index " + index + " is " + at);
+      char find;
+      System.out.println("Give me a character to find");
+      find = scanner.next().charAt(0);
+      int first;
+      first = input.indexOf(find);
+      System.out.println("The first index of " + find + " is " + first);
+      scanner.nextLine();
+      String contain = new String();
+      System.out.println("Give me a string to find");
+      contain = scanner.nextLine();
+      boolean fact;
+      fact = input.contains(contain);
+      System.out.println("The string " + contain + " is in the input string: " + fact);
 
-    /**
-     * Constructor for objects of class string3
-     */
-    public string3()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
-}
+  }
+   }
