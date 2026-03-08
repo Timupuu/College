@@ -8,9 +8,10 @@ public class ProPlan extends AIModel
    */
   public ProPlan(int slotsAvailable, String modelName, double price, int parameterCount, String contextWindowSize)
   {
+    super(modelName, price, parameterCount, contextWindowSize);
+
     // initialise instance variables
     this.slotsAvailable = slotsAvailable;
-    super(modelName, price, parameterCount, contextWindowSize);
   }
 
   public String addMember(String memberName) {

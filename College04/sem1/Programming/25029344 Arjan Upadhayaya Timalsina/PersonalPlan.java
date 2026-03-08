@@ -26,6 +26,7 @@ public class PersonalPlan extends AIModel
     if (amount <= 0) {
       return "Invalid amount. Please enter a positive number of prompts to purchase.";
     }
+    return;
   }
 
   public String userprompts(String promptText, String outputLength){
