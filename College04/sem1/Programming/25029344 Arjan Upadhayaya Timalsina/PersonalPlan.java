@@ -17,18 +17,14 @@ public class PersonalPlan extends AIModel
     return remainingPromptsinMonth;
   }
 
-  public String purchaseprompts(int amount){
+  public String purchaseprompts(int amount) {
     if (amount > 0) {
       remainingPromptsinMonth += amount;
       return "Successfully purchased " + amount + " prompts. Remaining prompts in month: " + remainingPromptsinMonth;
-
-    }
-    if (amount <= 0) {
+    } else {
       return "Invalid amount. Please enter a positive number of prompts to purchase.";
     }
-    return;
   }
-
   public String userprompts(String promptText, String outputLength){
     if (remainingPromptsinMonth > 0) {
       remainingPromptsinMonth -= 1;
