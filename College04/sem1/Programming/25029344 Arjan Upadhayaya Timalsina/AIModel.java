@@ -9,7 +9,7 @@ public class AIModel
     /**
      * Constructor for objects of class AIModel
      */
-    public AIModel(String modelName, double price, long parameterCount, String contextWindowSize)
+    public AIModel(String modelName, double price, int parameterCount, String contextWindowSize)
     {
         // initialise instance variables
         this.modelName = modelName;

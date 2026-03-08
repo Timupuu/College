@@ -6,7 +6,7 @@ public class ProPlan extends AIModel
   /**
    * Constructor for objects of class ProPlan
    */
-  public ProPlan(int slotsAvailable, String modelName, double price, long parameterCount, String contextWindowSize)
+  public ProPlan(int slotsAvailable, String modelName, double price, int parameterCount, String contextWindowSize)
   {
     // initialise instance variables
     this.slotsAvailable = slotsAvailable;
@@ -30,3 +30,4 @@ public class ProPlan extends AIModel
   public String displayPlanInfo(){
     return super.displayModelInfo() + "\nSlots Available: " + slotsAvailable;
   }
+}

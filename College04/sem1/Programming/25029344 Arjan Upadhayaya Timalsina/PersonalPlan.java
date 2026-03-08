@@ -6,7 +6,7 @@ public class PersonalPlan extends AIModel
   /**
    * Constructor for objects of class PersonalPlan
    */
-  public PersonalPlan(String modelName, double price, long parameterCount, String contextWindowSize , int remainingPromptsinMonth)
+  public PersonalPlan(String modelName, double price, int parameterCount, String contextWindowSize , int remainingPromptsinMonth)
   {
     // initialise instance variables
     super(modelName, price, parameterCount, contextWindowSize);
