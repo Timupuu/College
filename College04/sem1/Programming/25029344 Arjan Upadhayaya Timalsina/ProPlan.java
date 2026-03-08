@@ -1,33 +1,32 @@
-
-/**
- * Write a description of class ProPlan here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class ProPlan
+public class ProPlan extends AIModel
 {
-    // instance variables - replace the example below with your own
-    private int x;
+  // instance variables - replace the example below with your own
+  public int slotsAvailable;
 
-    /**
-     * Constructor for objects of class ProPlan
-     */
-    public ProPlan()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+  /**
+   * Constructor for objects of class ProPlan
+   */
+  public ProPlan(int slotsAvailable, String modelName, double price, long parameterCount, String contextWindowSize)
+  {
+    // initialise instance variables
+    this.slotsAvailable = slotsAvailable;
+    super(modelName, price, parameterCount, contextWindowSize);
+  }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+  public String addMember(String memberName) {
+    if (slotsAvailable > 0) {
+      slotsAvailable -= 1;
+      return "Successfully booked slot for " + memberName + ". Remaining slots: " + slotsAvailable;
+    } else {
+      return "No slots available. Please try again later.";
     }
-}
+  }
+
+  public String removeMember(String memberName) {
+    slotsAvailable += 1;
+    return "Successfully removed " + memberName + ". Remaining slots: " + slotsAvailable;
+  }
+
+  public String displayPlanInfo(){
+    return super.displayModelInfo() + "\nSlots Available: " + slotsAvailable;
+  }
