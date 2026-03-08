@@ -1,33 +1,41 @@
-
-/**
- * Write a description of class AIModel here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class AIModel
 {
     // instance variables - replace the example below with your own
-    private int x;
+    String modelName;
+    double price;
+    int parameterCount;
+    String contextWindowSize;
 
     /**
      * Constructor for objects of class AIModel
      */
-    public AIModel()
+    public AIModel(String modelName, double price, long parameterCount, String contextWindowSize)
     {
         // initialise instance variables
-        x = 0;
+        this.modelName = modelName;
+        this.price = price;
+        this.parameterCount = parameterCount;
+        this.contextWindowSize = contextWindowSize;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getModelName() {
+        return modelName;
+    }
+
+    public double getPrice() {
+      return price;
+    }
+
+    public int getParameterCount() {
+      return parameterCount;
+    }
+
+    public String getContextWindowSize() {
+      return contextWindowSize;
+    }
+
+    public String displayModelInfo(){
+      return "Model Name: " + modelName + "\nPrice: $" + price + "\nParameter Count: " + parameterCount + "\nContext Window Size: " + contextWindowSize;
+
     }
 }
