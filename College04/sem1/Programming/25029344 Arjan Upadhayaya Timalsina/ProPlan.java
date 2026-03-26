@@ -2,7 +2,7 @@ public class ProPlan extends AIModel
 {
   // instance variables - replace the example below with your own
   public int slotsAvailable;
-
+  public int remainingPromptsinMonth;
   /**
    * Constructor for objects of class ProPlan
    */
@@ -31,4 +31,9 @@ public class ProPlan extends AIModel
   public String displayPlanInfo(){
     return super.displayModelInfo() + "\nSlots Available: " + slotsAvailable;
   }
+
+  public String userprompts(String promptText, String outputLength){
+    return "Here is your response for the prompt: " + promptText + " with output length: " + outputLength + "You have unlimited prompts";
+  }
+
 }

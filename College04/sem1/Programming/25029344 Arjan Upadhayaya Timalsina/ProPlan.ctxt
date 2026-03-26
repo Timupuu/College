@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ProPlan
+comment1.params=slotsAvailable\ modelName\ price\ parameterCount\ contextWindowSize
+comment1.target=ProPlan(int,\ java.lang.String,\ double,\ int,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ ProPlan\n
+comment2.params=memberName
+comment2.target=java.lang.String\ addMember(java.lang.String)
+comment3.params=memberName
+comment3.target=java.lang.String\ removeMember(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ displayPlanInfo()
+comment5.params=promptText\ outputLength
+comment5.target=java.lang.String\ userprompts(java.lang.String,\ java.lang.String)
+numComments=6
