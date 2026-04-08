@@ -1,0 +1,30 @@
+Floating static route is a backup static route, it is only valid when the main route has a problem.
+It stays disabled when not in use.
+
+Administrative distance is a number which helps to choose the best route.
+Step 1:
+
+  Part 1:
+   0.0.0.0   0.0.0.0   10.10.10.1
+
+   0.0.0.0   0.0.0.0   10.10.10.5  The A.D value is 5 
+
+   Part 2:
+   ::/0 2001:db8:a:1::1
+   ::/0 2001:db8:a:2::1:5 The A.D value is 5
+
+   Part 3:
+   a) 192.168.10.16 255.255.255.240 10.10.10.2
+   b) 192.168.11.32 255.255.255.224 10.10.10.2 5
+
+Step 2:
+  a) 192.168.10.16 255.255.255.240 198.0.0.2 5 
+  b) 192.168.11.32 255.255.255.224 198.0.0.2 5
+
+Step 4: 
+  In ISP1: 
+   In Step c: 2001:db8:1:!0::/64 2001:db8:a:1::2
+   In Step d: 2001:db8:1:11::/64 2001:db8:a:1::2
+
+
+

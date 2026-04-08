@@ -1,0 +1,23 @@
+OSPF: Open shortest path first
+It is a routing protocol
+Shortest path first algorithm
+
+Syntax:
+  Network connected-network-address wildcard-subnet/inverse subnet mask
+
+1. Eg: 10.10.10.0/24 -> 255.255.255.0 -> 0.0.0.255
+
+2. Eg: 255.
+
+LSA: Link State Advertisement
+R₁:  Router Id 
+      -> Manual
+      -> Loopback Interface Highest ip (virtual interface)
+      -> Interface Highest
+-> area
+-> Network
+-> Internal 
+
+LSDB: Link-state database 
+  It is the same for the routers in the same area.
+
