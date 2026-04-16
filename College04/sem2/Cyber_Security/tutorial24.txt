@@ -1,0 +1,22 @@
+Qn.1:
+  Application Security is important in the present context as our everyday life is being more and more dependent on the internet and cyberspace. It is important that application are secured to ensure the security and integrity of the user data. Application security focuses on improving the user's data, the app's data  scouting for vulnerabilities and backdoor and many more.
+  Some of the examples to improve application security are as follows:
+    -> Ensuring two way authentication
+    -> Practicing principle of least privilege
+    -> Increasing automation within the application
+    -> Active scanning for flaws,bugs and vulnerabilities
+    -> Monitoring access logs and supervising supervising suspicious login points
+
+Qn.2:
+  Shift left approach is the security practice in application security where security is considered very early during the development of the application itself.
+
+Qm.3:
+  The different types of Application Security are as follow:
+    1. SAST:
+        Static Application Security Testing 
+    2. IAST:
+      
+    3. SCA:
+      
+    4.DAST:
+      
