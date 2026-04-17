@@ -11,7 +11,7 @@ public class SubscriptionGUI {
   JTextField priceField = new JTextField(20);
   JTextField parameterCountField = new JTextField(20);
   JTextField contextWindowSizeField = new JTextField(20);
- // JTextField promptQuotaField = new JTextField(20);
+  JTextField remainingPromptsinMonthField = new JTextField(20);
   JTextField slotsAvailableField = new JTextField(20);
   JTextField promptTextField = new JTextField(20);
   JTextField outputLengthField = new JTextField(20);
@@ -26,19 +26,68 @@ public class SubscriptionGUI {
 
   private void createAndShowGUI() {
     JFrame frame = new JFrame("Subscription Form");
-    JPanel panel = new JPanel();
-    panel.setLayout(new GridLayout(12, 2, 10, 10)); 
+    JPanel mainPanel = new JPanel();
+    mainPanel.setLayout(new BorderLayout());
 
-    panel.add(new JLabel("Name:")); panel.add(modelNameField);
-    panel.add(new JLabel("Pricing:")); panel.add(priceField);
-    panel.add(new JLabel("Parameter Count:")); panel.add(parameterCountField);
-    panel.add(new JLabel("Context Window:")); panel.add(contextWindowSizeField);
-   // panel.add(new JLabel("Prompt Quota:")); panel.add(promptQuotaField);
-    panel.add(new JLabel("Initial Team Members:")); panel.add(slotsAvailableField);
-    panel.add(new JLabel("Prompt Text:")); panel.add(promptTextField);
-    panel.add(new JLabel("Response Length:")); panel.add(outputLengthField);
-    panel.add(new JLabel("Name of Member:")); panel.add(memberNameField);
-    panel.add(new JLabel("Index number:")); panel.add(indexField);
+    // Center panel for labels and text fields
+    JPanel fieldsPanel = new JPanel();
+    fieldsPanel.setLayout(new GridBagLayout());
+    GridBagConstraints gbc = new GridBagConstraints();
+    gbc.insets = new Insets(5, 2, 5, 2);
+    gbc.anchor = GridBagConstraints.CENTER;
+    gbc.fill = GridBagConstraints. NONE;
+    gbc.gridx = 0;
+    gbc.gridy = 0;
+
+    int textFieldWidth = 12;
+    modelNameField = new JTextField(textFieldWidth);
+    priceField = new JTextField(textFieldWidth);
+    parameterCountField = new JTextField(textFieldWidth);
+    contextWindowSizeField = new JTextField(textFieldWidth);
+    remainingPromptsinMonthField = new JTextField(textFieldWidth);
+    slotsAvailableField = new JTextField(textFieldWidth);
+    promptTextField = new JTextField(textFieldWidth);
+    outputLengthField = new JTextField(textFieldWidth);
+    memberNameField = new JTextField(textFieldWidth);
+    indexField = new JTextField(textFieldWidth);
+
+    String[] labels = {
+      "Name:", "Pricing:", "Parameter Count:", "Context Window:",
+      "Prompt Quota:", "Initial Team Members:", "Prompt Text:",
+      "Response Length:", "Name of Member:", "Index number:"
+    };
+    JTextField[] fields = {
+      modelNameField, priceField, parameterCountField, contextWindowSizeField,
+      remainingPromptsinMonthField, slotsAvailableField, promptTextField,
+      outputLengthField, memberNameField, indexField
+    };
+
+   for (int i = 0; i < labels.length; i++) {
+      gbc.gridx = 0;
+      gbc.weightx = 0;
+      gbc.anchor = GridBagConstraints.EAST;
+      fieldsPanel.add(new JLabel(labels[i], SwingConstants.RIGHT), gbc);
+
+      gbc.gridx = 1;
+      gbc.weightx = 0;
+      gbc.anchor = GridBagConstraints.WEST;
+      fieldsPanel.add(Box.createHorizontalStrut(10), gbc); // '  ' space
+
+      gbc.gridx = 2;
+      gbc.weightx = 0;
+      gbc.anchor = GridBagConstraints.WEST;
+      fieldsPanel.add(fields[i], gbc);
+
+      gbc.gridy++;
+    }
+
+    // Buttons in two rows
+    JPanel buttonsPanel = new JPanel();
+    buttonsPanel.setLayout(new GridBagLayout());
+    GridBagConstraints bgbc = new GridBagConstraints();
+    bgbc.insets = new Insets(5, 10, 5, 10);
+    bgbc.fill = GridBagConstraints.HORIZONTAL;
+    bgbc.gridy = 0;
 
     JButton addPersonalBtn = new JButton("Add Personal Plan");
     JButton addProBtn = new JButton("Add Pro Plan");
@@ -46,19 +95,42 @@ public class SubscriptionGUI {
     JButton clearBtn = new JButton("Clear");
     JButton givePromptBtn = new JButton("Give a Prompt");
     JButton addTeamMemberBtn = new JButton("Add Team Member");
+    JButton removeTeamMemberBtn = new JButton("Remove Team Member");
 
-    panel.add(addPersonalBtn); panel.add(addProBtn);
-    panel.add(displayAllBtn); panel.add(clearBtn);
-    panel.add(givePromptBtn); panel.add(addTeamMemberBtn);
+    // First row
+    bgbc.gridx = 0; bgbc.gridwidth=1;
+    buttonsPanel.add(addPersonalBtn, bgbc);
+    bgbc.gridx = 1;
+    bgbc.gridwidth=2;
+    buttonsPanel.add(displayAllBtn, bgbc);
+    bgbc.gridx = 3; bgbc.gridwidth=1;
+    buttonsPanel.add(addProBtn, bgbc);
 
-    panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); 
+    // Second row
+    bgbc.gridy = 1; bgbc.gridwidth=1;
+    bgbc.gridx = 0;
+    buttonsPanel.add(clearBtn, bgbc);
+    bgbc.gridx = 1;
+    buttonsPanel.add(givePromptBtn, bgbc);
+    bgbc.gridx = 2;
+    buttonsPanel.add(addTeamMemberBtn, bgbc);
+    bgbc.gridx = 3;
+    buttonsPanel.add(removeTeamMemberBtn, bgbc);
+
+    fieldsPanel.setBorder(BorderFactory.createEmptyBorder(20, 40, 10, 40));
+    buttonsPanel.setBorder(BorderFactory.createEmptyBorder(10, 40, 20, 40));
+
     displayArea.setEditable(false);
     JScrollPane scrollPane = new JScrollPane(displayArea);
 
-    frame.add(panel, BorderLayout.NORTH);
+    mainPanel.add(fieldsPanel, BorderLayout.NORTH);
+    mainPanel.add(buttonsPanel, BorderLayout.CENTER);
+
+    frame.add(mainPanel, BorderLayout.NORTH);
     frame.add(scrollPane, BorderLayout.CENTER);
     frame.pack();
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
 
     addPersonalBtn.addActionListener(e -> addPersonalPlan());
@@ -86,12 +158,12 @@ public class SubscriptionGUI {
 
   private void addPersonalPlan() {
     try {
-      String name = modelNameField.getText().trim();
-      double pricing = Double.parseDouble(priceField.getText().trim());
-      int params = Integer.parseInt(parameterCountField.getText().trim());
-      int context = Integer.parseInt(contextWindowSizeField.getText().trim());
-      int quota = Integer.parseInt(promptQuotaField.getText().trim());
-      PersonalPlan plan = new PersonalPlan(modelName, price, parameterCount, contextWindowSize, );
+      String modelName = modelNameField.getText().trim();
+      double price = Double.parseDouble(priceField.getText().trim());
+      int parameterCount = Integer.parseInt(parameterCountField.getText().trim());
+      String contextWindowSize = contextWindowSizeField.getText().trim();
+      int remainingPromptsinMonth = Integer.parseInt(remainingPromptsinMonthField.getText().trim());
+      PersonalPlan plan = new PersonalPlan(modelName, price, parameterCount,contextWindowSize,remainingPromptsinMonth );
       models.add(plan);
       JOptionPane.showMessageDialog(null, "Personal Plan added.");
     } catch (Exception e) {
@@ -101,12 +173,12 @@ public class SubscriptionGUI {
 
   private void addProPlan() {
     try {
-      String name = modelNameField.getText().trim();
-      double pricing = Double.parseDouble(priceField.getText().trim());
-      int params = Integer.parseInt(parameterCountField.getText().trim());
-      int context = Integer.parseInt(contextWindowSizeField.getText().trim());
-      int slots = Integer.parseInt(slotsAvailableField.getText().trim());
-      ProPlan plan = new ProPlan(name, pricing, params, context, slots);
+      String modelName = modelNameField.getText().trim();
+      double price = Double.parseDouble(priceField.getText().trim());
+      int parameterCount = Integer.parseInt(parameterCountField.getText().trim());
+      String contextWindowSize = contextWindowSizeField.getText().trim();
+      int slotsAvailable = Integer.parseInt(slotsAvailableField.getText().trim());
+      ProPlan plan = new ProPlan(slotsAvailable,modelName, price, parameterCount, contextWindowSize);
       models.add(plan);
       JOptionPane.showMessageDialog(null, "Pro Plan added.");
     } catch (Exception e) {
@@ -126,7 +198,7 @@ public class SubscriptionGUI {
     priceField.setText("");
     parameterCountField.setText("");
     contextWindowSizeField.setText("");
-    promptQuotaField.setText("");
+    remainingPromptsinMonthField.setText("");
     slotsAvailableField.setText("");
     promptTextField.setText("");
     outputLengthField.setText("");
@@ -140,8 +212,8 @@ public class SubscriptionGUI {
       AIModel model = models.get(idx);
       if (model instanceof PersonalPlan) {
         String prompt = promptTextField.getText().trim();
-        int length = Integer.parseInt(outputLengthField.getText().trim());
-        ((PersonalPlan) model).makeApiCall(prompt, length);
+        String length = outputLengthField.getText().trim();
+        ((PersonalPlan) model).userPrompts(prompt, length);
         JOptionPane.showMessageDialog(null, "API call made for Personal Plan.");
       } else {
         JOptionPane.showMessageDialog(null, "This operation is only available for Personal Plan subscriptions.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -155,12 +227,47 @@ public class SubscriptionGUI {
       AIModel model = models.get(idx);
       if (model instanceof ProPlan) {
         String memberName = memberNameField.getText().trim();
-        ((ProPlan) model).addTeamMember(memberName);
+        ((ProPlan) model).addMember(memberName);
         JOptionPane.showMessageDialog(null, "Team member added to Pro Plan.");
       } else {
         JOptionPane.showMessageDialog(null, "Team collaboration is only available for Pro Plan subscriptions.", "Error", JOptionPane.ERROR_MESSAGE);
       }
     }
+  }
+
+  private void removeTeamMember() {
+    int idx = getValidatedIndex();
+    if (idx == -1) return;
+
+    AIModel model = models.get(idx);
+
+    if (!(model instanceof ProPlan)) {
+      JOptionPane.showMessageDialog(null,
+          "Team collaboration is only available for Pro Plan subscriptions.",
+          "Error", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
+
+    ProPlan proPlan = (ProPlan) model;
+
+    String memberName = memberNameField.getText().trim();
+
+    if (memberName.isEmpty()) {
+      JOptionPane.showMessageDialog(null,
+          "Please enter the name of the member to remove.",
+          "Error", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
+
+    if (proPlan.slotsAvailable >= proPlan.initialSlots) {
+      JOptionPane.showMessageDialog(null,
+          "There are no team members to remove.",
+          "Error", JOptionPane.ERROR_MESSAGE);
+      return;
+    }
+
+    String result = proPlan.removeMember(memberName);
+    JOptionPane.showMessageDialog(null, result);
   }
 }
 

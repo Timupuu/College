@@ -1,17 +1,12 @@
-public class ProPlan extends AIModel
-{
-  // instance variables - replace the example below with your own
+public class ProPlan extends AIModel {
   public int slotsAvailable;
+  public int initialSlots; // NEW — set once at construction, never changed
   public int remainingPromptsinMonth;
-  /**
-   * Constructor for objects of class ProPlan
-   */
-  public ProPlan(int slotsAvailable, String modelName, double price, int parameterCount, String contextWindowSize)
-  {
-    super(modelName, price, parameterCount, contextWindowSize);
 
-    // initialise instance variables
+  public ProPlan(int slotsAvailable, String modelName, double price, int parameterCount, String contextWindowSize) {
+    super(modelName, price, parameterCount, contextWindowSize);
     this.slotsAvailable = slotsAvailable;
+    this.initialSlots = slotsAvailable; // NEW
   }
 
   public String addMember(String memberName) {
@@ -28,12 +23,11 @@ public class ProPlan extends AIModel
     return "Successfully removed " + memberName + ". Remaining slots: " + slotsAvailable;
   }
 
-  public String displayPlanInfo(){
+  public String displayPlanInfo() {
     return super.displayModelInfo() + "\nSlots Available: " + slotsAvailable;
   }
 
-  public String userprompts(String promptText, String outputLength){
-    return "Here is your response for the prompt: " + promptText + " with output length: " + outputLength + "You have unlimited prompts";
+  public String userprompts(String promptText, String outputLength) {
+    return "Here is your response for the prompt: " + promptText + " with output length: " + outputLength + ". You have unlimited prompts";
   }
-
 }
