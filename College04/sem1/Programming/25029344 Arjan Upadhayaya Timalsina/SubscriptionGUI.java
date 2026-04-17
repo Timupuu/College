@@ -139,6 +139,7 @@ public class SubscriptionGUI {
     clearBtn.addActionListener(e -> clearFields());
     givePromptBtn.addActionListener(e -> givePrompt());
     addTeamMemberBtn.addActionListener(e -> addTeamMember());
+    removeTeamMemberBtn.addActionListener(e -> removeTeamMember());
   }
 
   private int getValidatedIndex() {
@@ -207,17 +208,19 @@ public class SubscriptionGUI {
   }
 
   private void givePrompt() {
-    int idx = getValidatedIndex();
-    if (idx != -1) {
-      AIModel model = models.get(idx);
+    String prompt = promptTextField.getText().trim();
+    String length = outputLengthField.getText().trim();
+    boolean found = false;
+    for (AIModel model : models) {
       if (model instanceof PersonalPlan) {
-        String prompt = promptTextField.getText().trim();
-        String length = outputLengthField.getText().trim();
         ((PersonalPlan) model).userPrompts(prompt, length);
         JOptionPane.showMessageDialog(null, "API call made for Personal Plan.");
-      } else {
-        JOptionPane.showMessageDialog(null, "This operation is only available for Personal Plan subscriptions.", "Error", JOptionPane.ERROR_MESSAGE);
+        found = true;
+        break;
       }
+    }
+    if (!found) {
+      JOptionPane.showMessageDialog(null, "No Personal Plan subscription found.", "Error", JOptionPane.ERROR_MESSAGE);
     }
   }
 
@@ -248,8 +251,6 @@ public class SubscriptionGUI {
       return;
     }
 
-    ProPlan proPlan = (ProPlan) model;
-
     String memberName = memberNameField.getText().trim();
 
     if (memberName.isEmpty()) {
@@ -259,15 +260,7 @@ public class SubscriptionGUI {
       return;
     }
 
-    if (proPlan.slotsAvailable >= proPlan.initialSlots) {
-      JOptionPane.showMessageDialog(null,
-          "There are no team members to remove.",
-          "Error", JOptionPane.ERROR_MESSAGE);
-      return;
-    }
-
-    String result = proPlan.removeMember(memberName);
+    String result = ((ProPlan) model).removeMember(memberName);
     JOptionPane.showMessageDialog(null, result);
-  }
-}
+  }}
 
