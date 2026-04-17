@@ -11,7 +11,7 @@ public class SubscriptionGUI {
   JTextField priceField = new JTextField(20);
   JTextField parameterCountField = new JTextField(20);
   JTextField contextWindowSizeField = new JTextField(20);
-  JTextField promptQuotaField = new JTextField(20);
+ // JTextField promptQuotaField = new JTextField(20);
   JTextField slotsAvailableField = new JTextField(20);
   JTextField promptTextField = new JTextField(20);
   JTextField outputLengthField = new JTextField(20);
@@ -33,7 +33,7 @@ public class SubscriptionGUI {
     panel.add(new JLabel("Pricing:")); panel.add(priceField);
     panel.add(new JLabel("Parameter Count:")); panel.add(parameterCountField);
     panel.add(new JLabel("Context Window:")); panel.add(contextWindowSizeField);
-    panel.add(new JLabel("Prompt Quota:")); panel.add(promptQuotaField);
+   // panel.add(new JLabel("Prompt Quota:")); panel.add(promptQuotaField);
     panel.add(new JLabel("Initial Team Members:")); panel.add(slotsAvailableField);
     panel.add(new JLabel("Prompt Text:")); panel.add(promptTextField);
     panel.add(new JLabel("Response Length:")); panel.add(outputLengthField);
@@ -91,7 +91,7 @@ public class SubscriptionGUI {
       int params = Integer.parseInt(parameterCountField.getText().trim());
       int context = Integer.parseInt(contextWindowSizeField.getText().trim());
       int quota = Integer.parseInt(promptQuotaField.getText().trim());
-      PersonalPlan plan = new PersonalPlan(modelName, price, params, context, quota);
+      PersonalPlan plan = new PersonalPlan(modelName, price, parameterCount, contextWindowSize, );
       models.add(plan);
       JOptionPane.showMessageDialog(null, "Personal Plan added.");
     } catch (Exception e) {
