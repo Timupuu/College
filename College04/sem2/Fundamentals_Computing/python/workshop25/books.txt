@@ -1,0 +1,11 @@
+1,The Pragmatic Programmer,Andrew Hunt,1999,10
+2,Clean Code,Robert C. Martin,2008,7
+3,Python Crash Course,Eric Matthes,2015,4
+4,Deep Learning,Ian Goodfellow,2016,2
+5,Introduction to Algorithms,Thomas H. Cormen,2009,5
+6,Computer Networking A Top Down Approach,James F Kurose and Keith W Ross,2020,6
+7,Computer Networks,Andrew S Tanenbaum and Nick Feamster and David J Wetherall,2021,4
+9,Network Security Essentials Applications and Standards,William Stallings,2021,3
+10,Fundamentals of Multimedia,Ze-Nian Li and Mark S Drew and Jiangchuan Liu,2021,5
+11,Digital Image Processing,Rafael C Gonzalez and Richard E Woods,2022,4
+12,Computer Vision Algorithms and Applications,Richard Szeliski,2022,2
