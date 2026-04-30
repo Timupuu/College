@@ -21,8 +21,6 @@ def create_unique_file(user_name):
     print(file_name)
 
 create_unique_file("Timupuu")
-```
 
-#   Timupuu  (c3deed51-9736-45b7-930b-76b5c1429768) ───
 
 
