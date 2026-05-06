@@ -655,3 +655,12 @@ Network Address | First usable | Last usable | Broadcast
 for /25 
   Subnet mask is 255.255.255.128
   Block size is 128 
+
+  05/06/2026
+
+  for 512 hosts
+
+  Network Address | First Usable IP | Last Usable IP | Broadcast Address |
+    10.10.0.0       10.10.0.1       10.10.2.0     192.168.2.1 
+
+    10.10.2.2 
